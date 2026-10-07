@@ -1,0 +1,69 @@
+# ---------------------------------------------------------------
+# Portfolyo — repoya sadece sitenin çalışması için gerekenler girer
+# ---------------------------------------------------------------
+
+# Kişisel / özel içerik: asla yüklenmez
+# raporlar, makale taslağı, sınıf arkadaşlarının isim ve numaraları
+proje-aciklama/
+# eski site kodu
+_eski-surum/
+
+# project-assets: orijinal görseller yerelde kalır (OCR orijinallerinde kimlik bilgisi var!).
+# Site yalnızca web/ altındaki optimize kopyaları (tools/optimize_images.py), CV'yi ve
+# mini oyunun kullandığı oyun dosyalarını kullanır.
+project-assets/*
+!project-assets/web/
+!project-assets/Ayse_Verda_Gulcemal.pdf
+
+# Mini oyun (js/game.js): sadece kullanılan çizimler ve sesler
+!project-assets/oyun-assets/
+project-assets/oyun-assets/*
+!project-assets/oyun-assets/assets/
+project-assets/oyun-assets/assets/*
+!project-assets/oyun-assets/assets/tezgah.png
+!project-assets/oyun-assets/assets/bahce.png
+!project-assets/oyun-assets/assets/mutfak.png
+!project-assets/oyun-assets/assets/balon.png
+!project-assets/oyun-assets/assets/karakter_on.png
+!project-assets/oyun-assets/assets/carrot.png
+!project-assets/oyun-assets/assets/cilek.png
+!project-assets/oyun-assets/assets/cucumber.png
+!project-assets/oyun-assets/assets/bugday.png
+!project-assets/oyun-assets/assets/apple.png
+!project-assets/oyun-assets/assets/carrot_cake.png
+!project-assets/oyun-assets/assets/granola.png
+!project-assets/oyun-assets/assets/turta.png
+!project-assets/oyun-assets/assets/salatalik_sandivic.png
+!project-assets/oyun-assets/assets/bunny_siparis.png
+!project-assets/oyun-assets/assets/bunny_happy.png
+!project-assets/oyun-assets/assets/capybara_siparis.png
+!project-assets/oyun-assets/assets/capybara_happy.png
+!project-assets/oyun-assets/assets/kirpi_siparis.png
+!project-assets/oyun-assets/assets/kirpi_happy.png
+!project-assets/oyun-assets/assets/kurba_siparis.png
+!project-assets/oyun-assets/assets/kurba_happy.png
+!project-assets/oyun-assets/assets/sesler/
+project-assets/oyun-assets/assets/sesler/*
+!project-assets/oyun-assets/assets/sesler/tavsan_talk_kisa.wav
+!project-assets/oyun-assets/assets/sesler/tavsan-thanku.wav
+!project-assets/oyun-assets/assets/sesler/capy_talk_kisa.wav
+!project-assets/oyun-assets/assets/sesler/capy-thanku.wav
+!project-assets/oyun-assets/assets/sesler/kirpi_talk_kisa.wav
+!project-assets/oyun-assets/assets/sesler/kirpi-thanku.wav
+!project-assets/oyun-assets/assets/sesler/frog_talk_kisa.wav
+!project-assets/oyun-assets/assets/sesler/kurba-thanku.wav
+!project-assets/oyun-assets/assets/sesler/pop_hizli.wav
+!project-assets/oyun-assets/assets/sesler/pop_yeni.wav
+!project-assets/oyun-assets/assets/sesler/page.wav
+
+# Python önbelleği (tools/)
+__pycache__/
+*.pyc
+
+# Editör / işletim sistemi dosyaları
+.vscode/
+.idea/
+.claude/
+Thumbs.db
+desktop.ini
+.DS_Store

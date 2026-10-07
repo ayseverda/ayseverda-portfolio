@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Tarama çerçevesi: dört köşe -->
+  <path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3" stroke="#3b82c4" stroke-width="2"/>
+  <!-- Okunan metin satırları -->
+  <path d="M7.5 9h9M7.5 12h6M7.5 15h8" stroke="#1f2a44" stroke-width="2"/>
+  <!-- Tarama çizgisi -->
+  <path d="M2 12h20" stroke="#e05595" stroke-width="1.6" opacity=".85"/>
+</svg>

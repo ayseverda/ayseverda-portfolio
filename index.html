@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f8fe">
+  <meta name="description" content="Yapay zeka, bilgisayarlı görü, backend ve yazılım projeleri geliştiren Ayşe Verda Gülcemal’in portfolyosu." data-i18n-attr="content:meta.description">
+  <title data-i18n="meta.title">Ayşe Verda Gülcemal — Bilgisayar Mühendisi | Yapay Zeka ve Yazılım</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="project-assets/web/favicon-32.png">
+  <link rel="apple-touch-icon" href="project-assets/web/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/i18n.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/game.js" defer></script>
+</head>
+<!--
+  Çeviri sistemi:
+  - Türkçe metinler bu dosyada durur (varsayılan dil).
+  - data-i18n="anahtar"                     → öğenin içeriği js/i18n.js > PAGE_EN[anahtar] ile değişir.
+  - data-i18n-attr="öznitelik:anahtar, ..." → aria-label, alt gibi öznitelikler için aynısı.
+  - Projeler, deneyim, sertifikalar ve yetenekler js/data.js'den JavaScript ile oluşturulur.
+-->
+<body>
+  <!-- Sayfada tekrar kullanılan ikonlar -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3.5 7 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.5V21h-4v-5.8c0-1.4 0-3.2-1.95-3.2S12.8 13.5 12.8 15.1V21H9z"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12.5h18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9.5 12 5l10 4.5L12 14z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 11.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5M22 9.5V15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 15c-1.7-1.7-2.6-4-2.4-6.4L9.7 7C10.4 4.6 12.6 3 15 3h3a3 3 0 0 1 3 3v3c0 2.4-1.6 4.6-4 5.3l-1.6.1c-2.4.2-4.7-.7-6.4-2.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="15.5" cy="8.5" r="1.6" fill="currentColor"/><path d="M9 15l-3 1-1.5-1.5 1-3M7 18c-1 1-3 2-4 2 0-1 1-3 2-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="m16 9 5 6m0-6-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="Ayşe Verda Gülcemal, ana sayfa" data-i18n-attr="aria-label:header.homeLabel">
+        <img src="project-assets/web/favicon-180.png" alt="" width="32" height="32">
+        <span>Ayşe Verda Gülcemal</span>
+      </a>
+      <nav class="nav" aria-label="Ana gezinme" data-i18n-attr="aria-label:header.nav">
+        <a href="#home" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="#projects" data-i18n="nav.projects">Projeler</a>
+        <a href="#experience" data-i18n="nav.experience">Deneyim</a>
+        <a href="#skills" data-i18n="nav.skills">Yetkinlikler</a>
+        <a href="#contact" data-i18n="nav.contact">İletişim</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="lang-toggle" aria-label="Switch language to English" data-i18n="nav.languageToggle" data-i18n-attr="aria-label:nav.languageToggleLabel">EN</button>
+        <a class="btn btn-soft btn-sm" href="project-assets/Ayse_Verda_Gulcemal.pdf?v=2026-10-08b" download="Ayse_Verda_Gulcemal_CV.pdf"><span data-i18n="nav.cv">CV’yi indir</span><svg class="icon"><use href="#i-download"/></svg></a>
+        <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false" data-i18n-attr="aria-label:header.menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Giriş -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-hello" data-i18n="hero.hello">Merhaba, ben</p>
+          <h1>Ayşe Verda<br>Gülcemal</h1>
+          <p class="hero-tagline" data-i18n="hero.tagline">Fikirleri çalışan ürünlere dönüştüren bir bilgisayar mühendisi.</p>
+          <p class="hero-desc" data-i18n="hero.desc">Yapay zeka, backend, bilgisayarlı görü ve yazılım projeleri — gerçek dünya otomasyonundan deneysel oyunlara.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects"><span data-i18n="hero.cta">Projelerimi Gör</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-outline" href="https://github.com/ayseverda" target="_blank" rel="noreferrer"><svg class="icon"><use href="#i-github"/></svg>GitHub</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/ayse-verda-gulcemal-5ba448249/" target="_blank" rel="noreferrer"><svg class="icon"><use href="#i-linkedin"/></svg>LinkedIn</a>
+            <a class="btn btn-outline" href="#contact"><svg class="icon"><use href="#i-mail"/></svg><span data-i18n="hero.contact">İletişim</span></a>
+          </div>
+          <div class="hero-status">
+            <span class="status-dot" data-i18n="hero.status">Yeni fırsatlara açığım</span>
+            <span class="status-place"><svg class="icon"><use href="#i-pin"/></svg><span data-i18n="hero.location">Ankara, Türkiye</span></span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="project-assets/web/hero.webp" alt="Ayşe kedisi, bitkileri ve bilgisayarıyla çalışma masasında" data-i18n-attr="alt:hero.artAlt" width="1400" height="933" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- Öne çıkan projeler -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2><span data-i18n="projects.title">Geliştirdiğim</span> <em data-i18n="projects.titleAccent">bazı projeler</em></h2>
+          </div>
+          <div class="chips" id="project-filters" role="group" aria-label="Projeleri filtrele" data-i18n-attr="aria-label:projects.filterLabel"></div>
+        </div>
+        <div class="featured-grid" id="featured"></div>
+
+        <!-- Cozy Café afişi -->
+        <article class="cozy-banner" id="cozy" data-filters="game">
+          <div class="cozy-panel">
+            <h3 data-i18n="cozy.title">Cozy Cafe Oyunu</h3>
+            <p data-i18n="cozy.text">C++ ve Raylib ile sıfırdan geliştirdiğim, tüm çizimlerini kendim yaptığım piksel sanatı kafe oyunu.</p>
+            <div class="tags"><span>C++</span><span>Raylib</span><span class="tag-soon" data-i18n="cozy.esp32">ESP32 <small>yakında</small></span></div>
+            <div class="cozy-actions">
+              <a class="btn btn-primary" href="#cozy" data-open-game><span data-i18n="cozy.tryHere">Burada oyna</span><svg class="icon"><use href="#i-play"/></svg></a>
+              <a class="btn btn-light" href="https://ayseverda.itch.io/cozzy" target="_blank" rel="noreferrer"><span data-i18n="cozy.demo">Tam demo</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-light" href="https://github.com/ayseverda/cozzy-game" target="_blank" rel="noreferrer"><span data-i18n="cozy.code">Kodu incele</span><svg class="icon"><use href="#i-code"/></svg></a>
+              <button type="button" class="btn btn-light" data-open-cozy data-i18n="cozy.details">Ayrıntılar</button>
+            </div>
+          </div>
+          <!-- Konsol mockup'ı (tools/optimize_images.py); video bu konsolun ekranında açılır (js/main.js > playVideo) -->
+          <div class="cozy-console">
+            <img class="console-mockup" src="project-assets/web/mockups/cozy-console.webp" alt="Pembe piksel konsol ekranında Cozy Cafe oyunu" data-i18n-attr="alt:cozy.consoleAlt" loading="lazy">
+            <button type="button" class="video-play" data-video="TgSV400EX8c" data-device="console" aria-label="Videoyu izle" data-i18n-attr="aria-label:cozy.watch">
+              <svg class="icon"><use href="#i-play"/></svg>
+            </button>
+          </div>
+          <div class="cozy-shots" aria-hidden="true">
+            <img src="project-assets/web/projects/cozzy-cover.webp" alt="" loading="lazy">
+            <img src="project-assets/web/projects/cozzy-mutfak.webp" alt="" loading="lazy">
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Deneyim -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <h2 data-i18n="experience.title">İş deneyimi</h2>
+        <div class="timeline" id="experience-list"></div>
+      </div>
+    </section>
+
+    <!-- Eğitim ve sertifikalar -->
+    <section class="section education" id="education">
+      <div class="container education-grid">
+        <div class="edu-card">
+          <p class="eyebrow" data-i18n="education.eyebrow">EĞİTİM</p>
+          <div class="edu-head">
+            <div>
+              <h3 data-i18n="education.school">Sakarya Üniversitesi</h3>
+              <p class="edu-degree" data-i18n="education.degree">Bilgisayar Mühendisliği (Lisans)</p>
+              <p class="edu-meta" data-i18n="education.meta">Ekim 2022 – Haziran 2026 · GANO 2.92 / 4.00</p>
+            </div>
+            <img src="project-assets/web/logos/sau.webp" alt="Sakarya Üniversitesi" data-i18n-attr="alt:education.school" width="72" height="98" loading="lazy">
+          </div>
+
+          <div class="edu-block">
+            <h4 data-i18n="education.thesisTitle">Bitirme projesi</h4>
+            <p data-i18n="education.thesis">TÜBİTAK 2209-A kapsamında desteklenen <strong>Yüz Felci İzleme ve Rehabilitasyon Sistemi</strong>. MediaPipe Face Mesh ile yüz asimetrisini kişinin kendi nötr yüzüne göre ölçen, React Native ve FastAPI mimarisinde bir mobil uygulama geliştirdim; çalışma makale olarak yayına hazırlanıyor.</p>
+          </div>
+
+          <div class="edu-block">
+            <h4 data-i18n="education.communityTitle">Topluluk ve gönüllülük</h4>
+            <ul class="dot-list" data-i18n="education.community">
+              <li>2,5 yıl boyunca SAÜ Yapay Zeka Topluluğu’nun yönetim ekibinde yer aldım; teknik etkinliklerin ve proje çalışmalarının organizasyonunda aktif rol aldım.</li>
+              <li>1 yıl boyunca Fikir ile Gelecek Kulübü’nün sosyal medya ekibinde kulübün sosyal medya çalışmalarını yürüttüm.</li>
+              <li>Toplum Gönüllüleri Vakfı için geliştirilen sosyal medya sisteminde full-stack geliştirici olarak görev aldım.</li>
+            </ul>
+          </div>
+
+          <p class="edu-lang"><strong data-i18n="education.languageTitle">Yabancı dil:</strong> <span data-i18n="education.language">İngilizce (B1+)</span></p>
+        </div>
+        <div class="cert-card">
+          <p class="eyebrow" data-i18n="certificates.eyebrow">BAŞARILAR VE SERTİFİKALAR</p>
+          <ul class="cert-list" id="certificates"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diğer çalışmalar -->
+    <section class="section archive" id="archive-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2><span data-i18n="archive.title">Diğer</span> <em data-i18n="archive.titleAccent">çalışmalarım</em></h2>
+            <p class="section-lead" data-i18n="archive.lead">Denemeler, ders projeleri ve geliştirdiğim sistemlerden seçkiler.</p>
+          </div>
+          <label class="search">
+            <svg class="icon"><use href="#i-search"/></svg>
+            <input id="project-search" type="search" placeholder="Proje veya teknoloji ara…" aria-label="Proje veya teknoloji ara" data-i18n-attr="placeholder:archive.searchPlaceholder, aria-label:archive.searchLabel">
+          </label>
+        </div>
+        <div class="chips chips-scroll" id="archive-filters" role="group" aria-label="Arşivi filtrele" data-i18n-attr="aria-label:archive.filterLabel"></div>
+        <div class="archive-grid" id="archive"></div>
+        <p class="empty-state" hidden data-i18n="archive.empty">Aramanızla eşleşen proje bulunamadı. Başka bir terim deneyin.</p>
+        <div class="archive-more">
+          <button type="button" class="btn btn-outline" id="archive-more"></button>
+          <a class="btn btn-primary" href="https://github.com/ayseverda?tab=repositories" target="_blank" rel="noreferrer"><svg class="icon"><use href="#i-github"/></svg><span data-i18n="archive.github">GitHub’daki tüm repolarım</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Yetenekler -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 data-i18n="skills.title">Kullandığım teknolojiler</h2>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- Şu anda: Cozy Cafe çizimleri ipe mandalla asılı polaroidler; yanında aradığım roller -->
+    <section class="section now">
+      <div class="container now-layout">
+        <div class="now-building">
+          <h3 class="now-title" data-i18n="now.title">Şu anda Cozy Cafe’yi geliştiriyorum</h3>
+          <div class="clothesline-scroll">
+            <div class="clothesline">
+              <svg class="rope" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 18 Q500 112 1010 18"/></svg>
+              <ul class="polaroids">
+            <li style="--y: 40; --r: -4deg; --d: 0.00s">
+              <a class="polaroid" href="#cozy" data-open-game><span class="pin" aria-hidden="true"></span><img src="project-assets/web/projects/cozzy-bahce.webp" alt="" loading="lazy"></a>
+            </li>
+            <li style="--y: 62; --r: 3deg; --d: 0.15s">
+              <a class="polaroid" href="#cozy" data-open-game><span class="pin" aria-hidden="true"></span><img src="project-assets/web/projects/cozzy-cover.webp" alt="" loading="lazy"></a>
+            </li>
+            <li style="--y: 62; --r: -2deg; --d: 0.30s">
+              <a class="polaroid" href="#cozy" data-open-game><span class="pin" aria-hidden="true"></span><img src="project-assets/web/projects/cozzy-mutfak.webp" alt="" loading="lazy"></a>
+            </li>
+            <li style="--y: 40; --r: 4deg; --d: 0.45s">
+              <a class="polaroid" href="#cozy" data-open-game><span class="pin" aria-hidden="true"></span><img src="project-assets/web/projects/cozzy.webp" alt="" loading="lazy"></a>
+            </li>
+              </ul>
+            </div>
+          </div>
+          <a class="now-link" href="#cozy" data-open-game><span data-i18n="now.play">Mini oyunu dene</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="now-roles">
+          <p class="eyebrow" data-i18n="now.lookingLabel">AÇIK OLDUĞUM ROLLER</p>
+          <ul data-i18n="now.roles">
+            <li>Junior Yazılım Mühendisi</li>
+            <li>Yapay Zeka Mühendisi</li>
+            <li>Backend Mühendisi</li>
+            <li>Yapay Zeka Ürün Mühendisi</li>
+            <li>Bilgisayarlı Görü</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- İletişim -->
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2 data-i18n="contact.title">Bir projen, fırsatın ya da ilginç bir problemin mi var?</h2>
+          <p class="contact-cta" data-i18n="contact.cta">Konuşalım.</p>
+        </div>
+        <ul class="contact-links">
+          <li><a href="mailto:ayseeverda@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>ayseeverda@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/ayse-verda-gulcemal-5ba448249/" target="_blank" rel="noreferrer"><svg class="icon"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
+          <li><a href="https://github.com/ayseverda" target="_blank" rel="noreferrer"><svg class="icon"><use href="#i-github"/></svg>GitHub</a></li>
+          <li><span><svg class="icon"><use href="#i-pin"/></svg><span data-i18n="hero.location">Ankara, Türkiye</span></span></li>
+        </ul>
+        <div class="contact-art">
+          <img src="project-assets/web/contact.webp" alt="" loading="lazy" width="900" height="704">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span></span>
+      <a href="#home" data-i18n="footer.top">Başa dön ↑</a>
+    </div>
+  </footer>
+
+  <!-- Mini oyun (js/game.js). Normalde gizli; "Oyna" denince konsolun ekranına taşınır (js/main.js > openConsole) -->
+  <div class="game-holder" id="game-holder" hidden>
+    <div class="game-screen" id="game-screen">
+      <canvas id="game-canvas" width="320" height="240" aria-label="Cozy Café mini oyunu" data-i18n-attr="aria-label:game.canvasLabel"></canvas>
+      <div class="game-hud">
+        <span class="hud-pill" title="Mutlu müşteri" data-i18n-attr="title:game.score">♥ <b id="game-score">0</b></span>
+        <div class="scene-tabs" id="game-tabs" role="group" aria-label="Sahneler" data-i18n-attr="aria-label:game.scenesLabel"></div>
+        <button type="button" class="hud-pill sound-toggle" id="game-sound" aria-pressed="true" aria-label="Ses" data-i18n-attr="aria-label:game.sound">
+          <svg class="icon icon-on"><use href="#i-sound"/></svg><svg class="icon icon-off"><use href="#i-mute"/></svg>
+        </button>
+      </div>
+      <div class="game-inventory" id="game-inventory" aria-label="Envanter" data-i18n-attr="aria-label:game.inventoryLabel"></div>
+      <p class="game-toast" id="game-toast" aria-live="polite"></p>
+      <button type="button" class="game-start" id="game-start">
+        <span class="game-start-btn"><svg class="icon"><use href="#i-play"/></svg><span data-i18n="game.start">Oyna</span></span>
+        <span class="game-start-hint" data-i18n="game.hint">Bahçeden topla, mutfakta pişir, kafede müşterilere ver</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Video sahnesi: karttaki laptop / telefon yerinden kalkıp büyüyerek buraya gelir (js/main.js > playVideo) -->
+  <div class="video-stage" id="video-stage" hidden>
+    <div class="video-backdrop" data-close-video></div>
+    <button type="button" class="video-close" data-close-video aria-label="Videoyu kapat" data-i18n-attr="aria-label:modal.closeVideo">×</button>
+    <div class="video-device" id="video-device"></div>
+  </div>
+
+  <dialog class="project-modal" id="project-modal">
+    <button class="modal-close" aria-label="Proje ayrıntılarını kapat" data-i18n-attr="aria-label:modal.close">×</button>
+    <div id="modal-content"></div>
+  </dialog>
+</body>
+</html>
