@@ -52,8 +52,6 @@ IMAGES = [
     ("IOT.png", "archive/iot.webp", 1000, False),
     ("IOT-cop.png", "archive/iot-cop.webp", 1000, False),
     ("isletim-sis.png", "archive/isletim-sis.webp", 1000, False),
-    ("masraf-hackathon.png", "archive/masraf-hackathon.webp", 700, False),
-    ("masraf-hackathon2.png", "archive/masraf-hackathon2.webp", 600, False),
     ("kuafor3.png", "archive/kuafor-hizmetler.webp", 1000, False),
     ("github-repo-analizi.png", "archive/github-repo-analizi.webp", 800, False),
     ("yeme-zinciri.png", "archive/yeme-zinciri.webp", 800, False),
@@ -63,13 +61,6 @@ IMAGES = [
     ("music-veritabani3.png", "archive/muzik-3.webp", 1000, False),
     ("kuafor2.png", "archive/kuafor-anasayfa.webp", 1000, False),
     ("kuafor1.png", "archive/kuafor-randevu.webp", 1000, False),
-    # Masraf uygulaması: masraf.pdf içinden alınan ekranlar. İki ekranın yan yana olduğu
-    # görseller 5. alandaki kırpma kutusuyla (sol, üst, sağ, alt) tek tek ekranlara bölünür.
-    ("masraf/onboarding.png", "archive/masraf-acilis.webp", 600, False, (0, 0, 703, 967)),
-    ("masraf/onboarding.png", "archive/masraf-karsilama.webp", 600, False, (706, 0, 1386, 967)),
-    ("masraf/giris.png", "archive/masraf-giris.webp", 600, False, (0, 0, 811, 1164)),
-    ("masraf/giris.png", "archive/masraf-kayit.webp", 600, False, (815, 0, 1625, 1164)),
-    ("masraf/islem-ekle.png", "archive/masraf-islem-ekle.webp", 600, False),
     ("kisisel-web.png", "archive/kisisel-web.webp", 1000, False),
     ("medikal.png", "archive/medikal.webp", 1000, False),
     ("simulasyon.png", "archive/simulasyon.webp", 1000, False),
@@ -146,7 +137,6 @@ def main() -> None:
         image.save(destination, "WEBP", quality=82, method=6)
         print(f"{target:38} {image.width}x{image.height}  {destination.stat().st_size // 1024} KB")
     make_mockups()
-    make_phone_group(["mockups/masraf-acilis.webp", "mockups/masraf-ana.webp", "mockups/masraf-giris-2.webp"], "mockups/masraf-cover.webp")
 
 
 # ---------------------------------------------------------------------------
@@ -168,13 +158,6 @@ MOCKUPS = [
     ("laptop", "projects/ocr-cover.webp", "mockups/ocr-laptop.webp", "cover"),
     ("laptop", "projects/dermai-cover.webp", "mockups/dermai-laptop.webp", "cover"),
     ("laptop", "projects/ieltsgo-homepage.webp", "mockups/ieltsgo-laptop.webp", "cover"),
-    ("phone", "archive/masraf-hackathon.webp", "mockups/masraf-ana.webp", "width"),
-    ("phone", "archive/masraf-acilis.webp", "mockups/masraf-acilis.webp", "width"),
-    ("phone", "archive/masraf-karsilama.webp", "mockups/masraf-karsilama.webp", "width"),
-    ("phone", "archive/masraf-giris.webp", "mockups/masraf-giris.webp", "width"),
-    ("phone", "archive/masraf-kayit.webp", "mockups/masraf-kayit.webp", "width"),
-    ("phone", "archive/masraf-islem-ekle.webp", "mockups/masraf-islem-ekle.webp", "width"),
-    ("phone", "archive/masraf-hackathon2.webp", "mockups/masraf-giris-2.webp", "width"),
     ("iphone", "projects/facial-phone1.webp", "mockups/facial-iphone1.webp", "cover"),
     ("iphone", "projects/facial-phone2.webp", "mockups/facial-iphone2.webp", "cover"),
 ]

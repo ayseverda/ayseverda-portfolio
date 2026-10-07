@@ -221,7 +221,7 @@ const PROJECT_FILTERS = ['all', 'ai', 'vision', 'backend', 'web', 'mobile', 'gam
 // Mobil ekranlar için tools/optimize_images.py'nin ürettiği telefon mockup'ları (web/mockups/) kullanılır.
 // Görseli olmayan projelerde kategori rengine göre bir kapak çizilir.
 
-const ARCHIVE_FILTERS = ['all', 'ai', 'vision', 'backend', 'web', 'mobile', 'systems', 'cpp', 'data', 'iot'];
+const ARCHIVE_FILTERS = ['all', 'ai', 'backend', 'web', 'systems', 'cpp', 'data', 'iot'];
 
 const ARCHIVE_PROJECTS = [
   {
@@ -254,30 +254,6 @@ const ARCHIVE_PROJECTS = [
     tags: ['.NET 8', 'Windows Forms', 'PostgreSQL', 'Npgsql', 'BCrypt', 'MailKit'],
     links: [{ label: { tr: 'GitHub', en: 'GitHub' }, url: 'https://github.com/ayseverda/Medikal-Cihaz-Takip-Uygulamas-' }],
     thumb: { src: IMG + 'archive/medikal.webp', fit: 'cover' }
-  },
-  {
-    name: { tr: 'Masraf Takip Uygulaması', en: 'Expense Tracking App' },
-    categories: ['mobile'],
-    description: {
-      tr: 'Gelir ve giderleri kategorilere ayırıp grafik ve raporlarla gösteren, fiş fotoğrafı eklenebilen bir Flutter uygulaması geliştirdim.',
-      en: 'I built a Flutter app that sorts income and expenses into categories, shows them with charts and reports, and lets you attach receipt photos.'
-    },
-    problem: {
-      tr: 'Harcamalar farklı yerlerde tutulunca hem takip etmek hem de paranın nereye gittiğini görmek zorlaşıyor.',
-      en: 'When spending is tracked in different places, it’s hard to keep up and see where the money goes.'
-    },
-    built: {
-      tr: 'Tanıtım ekranlarını, Google ile girişi de içeren kayıt / giriş akışını, gelir-gider ekleme formunu, kategori filtrelerini, pasta grafiklerini, aylık / haftalık / yıllık raporları, kamera veya galeriden fiş eklemeyi ve karanlık / aydınlık temayı yaptım.',
-      en: 'I made the onboarding screens, a sign-up / login flow including Google sign-in, the income / expense form, category filters, pie charts, monthly / weekly / yearly reports, attaching receipts from the camera or gallery, and dark / light themes.'
-    },
-    approach: {
-      tr: 'Uygulamayı Flutter ile tek kod tabanında yazdım ve durumu Provider ile yönettim. Girişi Firebase Authentication, verileri Cloud Firestore, fiş görsellerini Firebase Storage ile sakladım.',
-      en: 'I wrote the app in a single Flutter codebase and managed state with Provider. I used Firebase Authentication for login, Cloud Firestore for data and Firebase Storage for receipt images.'
-    },
-    tags: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore', 'Firebase Storage', 'Provider'],
-    thumb: { src: IMG + 'mockups/masraf-cover.webp', fit: 'contain', tone: 'device' },
-    gallery: ['masraf-acilis', 'masraf-karsilama', 'masraf-giris', 'masraf-giris-2', 'masraf-kayit', 'masraf-ana', 'masraf-islem-ekle']
-      .map(name => IMG + 'mockups/' + name + '.webp')
   },
   {
     name: { tr: 'Yapay Zeka Destekli Kuaför Yönetim Sistemi', en: 'AI-Supported Hairdresser Management System' },
