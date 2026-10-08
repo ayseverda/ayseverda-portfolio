@@ -19,7 +19,7 @@ const PAGE_EN = {
 
   'hero.hello': 'Hi, I’m',
   'hero.tagline': 'Computer Engineer building with AI, code and curiosity.',
-  'hero.desc': 'AI, backend, computer vision and software projects — from real-world automation to experimental games.',
+  'hero.desc': 'I build AI, backend and software projects.',
   'hero.cta': 'View Projects',
   'hero.contact': 'Contact',
   'hero.status': 'Open to opportunities',
@@ -59,7 +59,7 @@ const PAGE_EN = {
   'education.thesisTitle': 'Graduation project',
   'education.thesis': 'The <strong>Facial Paralysis Monitoring and Rehabilitation System</strong>, supported under TÜBİTAK 2209-A. I built a mobile app on a React Native and FastAPI architecture that measures facial asymmetry against the user’s own neutral face with MediaPipe Face Mesh; the work is being prepared as a journal paper.',
   'education.communityTitle': 'Community &amp; volunteering',
-  'education.community': '<li>Spent 2.5 years on the management team of the SAÜ Artificial Intelligence Community, actively organizing technical events and projects.</li><li>Ran the club’s social media for a year as part of the Fikir ile Gelecek Club’s social media team.</li><li>Worked as a full-stack developer on a social media system built for Toplum Gönüllüleri Vakfı (Community Volunteers Foundation).</li>',
+  'education.community': '<li>Spent 2.5 years on the management team of the SAÜ Artificial Intelligence Community, contributing to the community’s social media. In 2024, our community won second place in the “Most Active Student Community on Social Media” category.</li><li>Ran the club’s social media for a year as part of the Fikir ile Gelecek Club’s social media team.</li>',
   'education.languageTitle': 'Languages:',
   'education.language': 'English (B1+)',
   'certificates.eyebrow': 'ACHIEVEMENTS &amp; CERTIFICATES',
@@ -93,6 +93,7 @@ const UI_TEXT = {
   tr: {
     viewProject: 'Projeyi İncele',
     watchVideo: 'Videoyu izle',
+    viewCertificate: 'sertifikayı görüntüle',
     openDetails: 'ayrıntılarını aç',
     notebook: 'PROJE DEFTERİ',
     problem: 'PROBLEM',
@@ -126,6 +127,7 @@ const UI_TEXT = {
   en: {
     viewProject: 'View Project',
     watchVideo: 'Watch video',
+    viewCertificate: 'view certificate',
     openDetails: 'open details',
     notebook: 'PROJECT NOTEBOOK',
     problem: 'THE PROBLEM',

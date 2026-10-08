@@ -303,12 +303,23 @@ function renderExperience() {
     </article>`).join('');
 }
 
+// Sertifika görseli: küçük önizleme; üstüne gelince büyür, tıklayınca tam boyutu yeni sekmede açılır
+function certThumbHtml(cert) {
+  if (!cert.image) return '<span></span>';
+  const name = pick(cert.name);
+  return `<a class="cert-thumb" href="${cert.image}" target="_blank" rel="noopener" aria-label="${name} — ${ui().viewCertificate}">
+      <img src="${cert.image}" alt="" loading="lazy">
+      <span class="cert-preview" aria-hidden="true"><img src="${cert.image}" alt="" loading="lazy"></span>
+    </a>`;
+}
+
 function renderCertificates() {
   $('#certificates').innerHTML = CERTIFICATES.map(cert => `
     <li>
       <span class="cert-icon c-${cert.color}">${icon('award')}</span>
       <span class="cert-name">${pick(cert.name)}${cert.issuer ? `<small>${cert.issuer}</small>` : ''}</span>
       <span class="cert-year">${cert.year}</span>
+      ${certThumbHtml(cert)}
     </li>`).join('');
 }
 

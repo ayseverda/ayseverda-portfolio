@@ -21,8 +21,8 @@ const FEATURED_PROJECTS = [
     tags: ['React Native', 'FastAPI', 'Python', 'MediaPipe Face Mesh'],
     links: [{ label: { tr: 'GitHub', en: 'GitHub' }, url: 'https://github.com/ayseverda/bellspalsy' }],
     description: {
-      tr: 'MediaPipe ile yüz asimetrisini kişinin kendi nötr yüzüne göre ölçen ve rehabilitasyon ilerlemesini takip eden bir mobil uygulama geliştirdim. TÜBİTAK 2209-A destekli bitirme projem.',
-      en: 'I built a mobile app that measures facial asymmetry against the user’s own neutral face with MediaPipe and tracks rehabilitation progress. It is my TÜBİTAK 2209-A supported graduation project.'
+      tr: 'MediaPipe ile yüz asimetrisini kişinin kendi nötr yüzüne göre ölçen ve rehabilitasyon ilerlemesini takip eden bir mobil uygulama geliştirdim. Bitirme projem olan bu çalışma, TÜBİTAK 2209-A programı kapsamında destekleniyor.',
+      en: 'I built a mobile app that measures facial asymmetry against the user’s own neutral face with MediaPipe and tracks rehabilitation progress. This graduation project is supported under the TÜBİTAK 2209-A program.'
     },
     problem: {
       tr: 'Yüz felci değerlendirmesi çoğunlukla hekimin gözlemine dayanıyor; hastanın evde yaptığı egzersizlerde ilerlemesini nesnel olarak görmesi zor. Derin öğrenme çözümleri ise büyük etiketli veri ve güçlü donanım istiyor.',
@@ -63,8 +63,8 @@ const FEATURED_PROJECTS = [
     tags: ['Python', 'OpenCV', 'EasyOCR', 'SIFT', 'Streamlit'],
     links: [{ label: { tr: 'GitHub', en: 'GitHub' }, url: 'https://github.com/ayseverda/kimlik-ocr-sistemi' }],
     description: {
-      tr: 'Fotoğraflardaki kimlik kartını bulup düzelten, bilgileri otomatik okuyan ve sonuçları kontrol edip Excel’e aktarabildiğim bir masaüstü uygulaması geliştirdim.',
-      en: 'I built a desktop app that finds and straightens the ID card in a photo, reads its details automatically, and lets me review the results and export them to Excel.'
+      tr: 'Fotoğraflardaki kimlik kartını bulup düzelten, bilgileri otomatik okuyan ve sonuçları kontrol edip Excel’e aktarabildiğim bir masaüstü uygulaması geliştirdim. Uygulama şu anda bir kurumda aktif olarak kullanılıyor.',
+      en: 'I built a desktop app that finds and straightens the ID card in a photo, reads its details automatically, and lets me review the results and export them to Excel. The app is currently in active use at an organization.'
     },
     problem: {
       tr: 'Kimlik bilgilerini fotoğraflardan elle yazmak hem yavaş hem de hataya açık. Fotoğraflar eğik, bulanık ya da farklı ışıkta çekildiğinde basit bir OCR da yanlış sonuç veriyor.',
@@ -83,8 +83,8 @@ const FEATURED_PROJECTS = [
       en: 'OCR often failed on low-quality images and Turkish characters, so I added extra validation rules and a mechanism that re-analyzes suspicious fields.'
     },
     result: {
-      tr: 'Küçük bir OCR denemesini, sonuçları gözden geçirip dışa aktarabildiğim kullanışlı bir veri çıkarma aracına dönüştürdüm; projeyi geliştirmeye devam ediyorum.',
-      en: 'I turned a small OCR experiment into a practical extraction tool where I can review results and export them; I’m still improving it.'
+      tr: 'Uygulama şu anda bir kurumda aktif olarak kullanılıyor. Kullanıcılardan gelen geri bildirimlere göre yeni özellikler ekleyerek kullanıcı deneyimini geliştirmeye devam ediyorum.',
+      en: 'The app is currently in active use at an organization. I keep improving the user experience by adding new features based on user feedback.'
     },
     visual: {
       layout: 'laptop',
@@ -143,8 +143,8 @@ const FEATURED_PROJECTS = [
     tags: ['React', 'TypeScript', 'FastAPI', 'MongoDB', 'Gemini API', 'ElevenLabs'],
     links: [{ label: { tr: 'GitHub', en: 'GitHub' }, url: 'https://github.com/ayseverda/ieltsGo' }, { label: { tr: 'Tanıtım videosu', en: 'Demo video' }, url: 'https://youtu.be/CimrOaKrc9Q' }],
     description: {
-      tr: 'Hackathon’da ekibimle, okuma, yazma, dinleme ve konuşma becerilerini tek platformda çalıştıran yapay zeka destekli bir IELTS hazırlık uygulaması geliştirdik.',
-      en: 'At a hackathon, my team and I built an AI-powered IELTS prep app that trains reading, writing, listening and speaking in one platform.'
+      tr: 'Hackathon’da ekibimizle, okuma, yazma, dinleme ve konuşma becerilerini tek platformda çalıştıran yapay zeka destekli bir IELTS hazırlık uygulaması geliştirdik.',
+      en: 'At a hackathon, our team built an AI-powered IELTS prep app that trains reading, writing, listening and speaking in one platform.'
     },
     problem: {
       tr: 'IELTS’e hazırlananlar dört beceri için farklı kaynaklar kullanıyor ve özellikle yazma ile konuşmada kişisel geri bildirim almak zor.',
@@ -170,7 +170,7 @@ const FEATURED_PROJECTS = [
       layout: 'laptop',
       images: [{ src: IMG + 'mockups/ieltsgo-laptop.webp', alt: { tr: 'Laptop ekranında IELTSgo ana sayfası', en: 'IELTSgo home page on a laptop screen' } }]
     },
-    gallery: ['ieltsgo-cover', 'ieltsgo-homepage', 'ieltsgo-moduls', 'ieltsgo-test', 'ieltsgo-deneme', 'ieltsgo-sonuc', 'ieltsgo-dashboard']
+    gallery: ['ieltsgo-cover', 'ieltsgo-moduls', 'ieltsgo-test', 'ieltsgo-deneme', 'ieltsgo-sonuc', 'ieltsgo-dashboard']
   }
 ];
 
@@ -259,20 +259,20 @@ const ARCHIVE_PROJECTS = [
     name: { tr: 'Yapay Zeka Destekli Kuaför Yönetim Sistemi', en: 'AI-Supported Hairdresser Management System' },
     categories: ['ai', 'web', 'backend'],
     description: {
-      tr: 'Randevu, çalışan ve hizmet yönetimi olan; kullanıcının fotoğrafına göre yapay zekayla saç modeli öneren bir kuaför web sitesi geliştirdim.',
-      en: 'I built a salon website with appointment, staff and service management that suggests hairstyles from the user’s photo using AI.'
+      tr: 'Randevu, çalışan ve hizmet yönetimi olan; kullanıcının kendi fotoğrafı üzerinde istediği saç modelini yapay zekayla deneyebildiği bir kuaför web sitesi geliştirdim.',
+      en: 'I built a salon website with appointment, staff and service management, where users can try the hairstyle they want on their own photo using AI.'
     },
     problem: {
       tr: 'Bir salonda randevuların çakışmadan alınması, her çalışanın sadece yapabildiği işlemlere atanması ve yönetimin tek panelden yapılması gerekiyordu.',
       en: 'A salon needed appointments without clashes, staff assigned only to services they can do, and management from a single panel.'
     },
     built: {
-      tr: 'Kayıt / giriş ve oturum yönetimini; 09–18 arası ve bugünden itibaren 2 hafta için çakışma kontrollü randevu almayı; randevuları onaylayıp reddedebilen admin panelini; çalışanların aylık kazancını gösteren grafiği ve kullanıcının yüklediği fotoğrafa göre saç modeli önerisini yaptım.',
-      en: 'I made sign-up / login with sessions; booking between 09–18 up to two weeks ahead with clash checks; an admin panel to approve or reject appointments; a chart of each employee’s monthly earnings; and hairstyle suggestions from an uploaded photo.'
+      tr: 'Kayıt / giriş ve oturum yönetimini, çalışma saatleri (09–18) içinde ve iki hafta öncesine kadar çakışma kontrollü randevu sistemini, randevuları onaylayıp reddedebilen admin panelini ve çalışanların aylık kazancını gösteren grafiği geliştirdim. Kullanıcı fotoğrafını yükleyip bir saç modeli seçtiğinde, yapay zeka bu modeli kullanıcının fotoğrafı üzerinde oluşturuyor.',
+      en: 'I developed sign-up / login with session management, a booking system with clash checks within working hours (09–18) up to two weeks ahead, an admin panel to approve or reject appointments, and a chart of each employee’s monthly earnings. When users upload a photo and pick a hairstyle, AI generates that style on their own photo.'
     },
     approach: {
-      tr: 'ASP.NET Core MVC ve Entity Framework kullandım; kısıtları ve sorguları LINQ ile yazdım. Mesajları REST API ile çektim, fotoğrafı Base64’e çevirip OpenAI API’sine gönderdim; arayüzü Bootstrap ile tasarladım.',
-      en: 'I used ASP.NET Core MVC and Entity Framework and wrote constraints and queries with LINQ. I loaded messages through a REST API, converted the photo to Base64 and sent it to the OpenAI API, and designed the UI with Bootstrap.'
+      tr: 'ASP.NET Core MVC ve Entity Framework kullandım; kısıtları ve sorguları LINQ ile yazdım. Mesajları REST API ile çektim, arayüzü Bootstrap ile tasarladım. Saç modeli denemesi için kullanıcının fotoğrafını ve seçtiği modeli bir yapay zeka görsel üretme API’sine gönderdim.',
+      en: 'I used ASP.NET Core MVC and Entity Framework and wrote constraints and queries with LINQ. I loaded messages through a REST API and designed the UI with Bootstrap. For the hairstyle try-on, I sent the user’s photo and chosen style to an AI image generation API.'
     },
     challenge: {
       tr: 'Başta her çalışanı tek bir işleme bağlayabiliyordum; ayrı bir uzmanlık tablosu kurarak çalışan ile işlem arasında çoktan çoğa ilişkiye geçtim ve sorunu çözdüm.',
@@ -288,8 +288,8 @@ const ARCHIVE_PROJECTS = [
     categories: ['ai', 'web', 'backend'],
     team: { tr: 'Grup projesi', en: 'Team project' },
     description: {
-      tr: '3 kişilik ekibimle; şehir, tarih, beslenme tercihi ve hava durumuna göre GPT-4 ile gün gün seyahat planı hazırlayan bir web uygulaması geliştirdik.',
-      en: 'With my three-person team, I built a web app that uses GPT-4 to create a day-by-day travel plan from the city, dates, diet and weather forecast.'
+      tr: '3 kişilik ekibimizle; şehir, tarih, beslenme tercihi ve hava durumuna göre GPT-4 ile gün gün seyahat planı hazırlayan bir web uygulaması geliştirdik.',
+      en: 'Our three-person team built a web app that uses GPT-4 to create a day-by-day travel plan from the city, dates, diet and weather forecast.'
     },
     problem: {
       tr: 'Seyahat planlarken insanlar rota, restoran ve hava durumu için birden fazla uygulama arasında gidip geliyor ve bu çok zaman alıyor.',
@@ -346,8 +346,8 @@ const ARCHIVE_PROJECTS = [
     categories: ['systems', 'backend'],
     team: { tr: 'Grup projesi', en: 'Team project' },
     description: {
-      tr: '3 kişilik ekibimle; birebir, grup ve herkese açık mesajlaşmayı destekleyen, mesajları kendi yazdığımız şifreleme ve hash algoritmalarıyla koruyan gerçek zamanlı bir mesajlaşma uygulaması geliştirdik.',
-      en: 'With my three-person team, I built a real-time messaging app with direct, group and broadcast chats that protects messages with encryption and hashing algorithms we wrote ourselves.'
+      tr: '3 kişilik ekibimizle; birebir, grup ve herkese açık mesajlaşmayı destekleyen, mesajları kendi yazdığımız şifreleme ve hash algoritmalarıyla koruyan gerçek zamanlı bir mesajlaşma uygulaması geliştirdik.',
+      en: 'Our three-person team built a real-time messaging app with direct, group and broadcast chats that protects messages with encryption and hashing algorithms we wrote ourselves.'
     },
     problem: {
       tr: 'Mesajların ağ üzerinde okunamadığı, veritabanında değiştirilemediği ve alıcı çevrimdışıyken kaybolmadığı bir sistem tasarlamamız gerekiyordu.',
@@ -375,7 +375,7 @@ const ARCHIVE_PROJECTS = [
     team: { tr: 'Grup projesi', en: 'Team project' },
     description: {
       tr: 'Grup arkadaşımla, çocuklarda günlük şeker tüketimi, yaş ve cinsiyete göre sinirlilik seviyesini önce bulanık mantıkla modelledik, ardından sinir ağıyla tahmin ettik.',
-      en: 'With my teammate, I modeled children’s irritability level from daily sugar intake, age and gender with fuzzy logic, then predicted it with a neural network.'
+      en: 'A teammate and I modeled children’s irritability level from daily sugar intake, age and gender with fuzzy logic, then predicted it with a neural network.'
     },
     problem: {
       tr: 'Şekerin, yaşın ve cinsiyetin sinirlilik üzerindeki etkisi “var / yok” gibi keskin sınırlarla anlatılamıyor; kısmi üyelikle çalışan bir modele ihtiyaç vardı.',
@@ -399,7 +399,7 @@ const ARCHIVE_PROJECTS = [
     team: { tr: 'Grup projesi', en: 'Team project' },
     description: {
       tr: 'Grup arkadaşımla, kalıtım, tetikleyiciler ve fonksiyonlar içeren 18 tabloluk bir müzik veritabanı tasarlayıp C# uygulamasıyla ekleme, okuma, güncelleme ve silme işlemlerini bağladık.',
-      en: 'With my teammate, I designed an 18-table music database with inheritance, triggers and functions, and connected create, read, update and delete operations to a C# app.'
+      en: 'A teammate and I designed an 18-table music database with inheritance, triggers and functions, and connected create, read, update and delete operations to a C# app.'
     },
     tags: ['PostgreSQL', 'C#', 'Triggers', 'Stored Procedures'],
     thumb: { src: IMG + 'archive/muzik-1.webp', fit: 'cover' },
@@ -411,8 +411,8 @@ const ARCHIVE_PROJECTS = [
     categories: ['ai', 'web', 'backend'],
     team: { tr: 'Grup projesi', en: 'Team project' },
     description: {
-      tr: 'Ekibimle, öğrenilmek istenen konu ve süreye göre yapay zekayla gün gün yol haritası çıkaran ve her aşama için soru üreten bir web uygulaması geliştirdik.',
-      en: 'With my team, I built a web app that uses AI to create a day-by-day learning roadmap from a goal and a time frame, with questions for each stage.'
+      tr: 'Ekibimizle, öğrenilmek istenen konu ve süreye göre yapay zekayla gün gün yol haritası çıkaran ve her aşama için soru üreten bir web uygulaması geliştirdik.',
+      en: 'As a team, we built a web app that uses AI to create a day-by-day learning roadmap from a goal and a time frame, with questions for each stage.'
     },
     problem: {
       tr: 'Yeni bir konuya başlarken neyi hangi sırayla ve kaç günde çalışacağını planlamak zor; hazır müfredatlar kişinin hedefine uymuyor.',
@@ -434,7 +434,7 @@ const ARCHIVE_PROJECTS = [
     team: { tr: 'Grup projesi', en: 'Team project' },
     description: {
       tr: 'Grup arkadaşımla, el hareketiyle açılan, doluluğunu ağırlıkla ölçen ve telefona bildirim gönderen bir akıllı çöp kutusu prototipi yaptık.',
-      en: 'With my teammate, I built a smart trash bin prototype that opens with a hand gesture, measures how full it is by weight and sends notifications to a phone.'
+      en: 'A teammate and I built a smart trash bin prototype that opens with a hand gesture, measures how full it is by weight and sends notifications to a phone.'
     },
     built: {
       tr: 'Ultrasonik sensör eli algılayınca servo motor kapağı açıp kapatıyor; load cell ağırlığı kilograma çeviriyor. Doluluk %60’ta “neredeyse doldu”, %90’da “dolu”, 1 kg’ın altına düşünce “çöp çıkarıldı” bildirimi gönderiyor.',
@@ -454,7 +454,7 @@ const ARCHIVE_PROJECTS = [
     team: { tr: 'Grup projesi', en: 'Team project' },
     description: {
       tr: 'Grup arkadaşımla, tek bir disk dosyası üzerinde blok blok çalışan basit bir dosya sistemi simülatörü yazdık.',
-      en: 'With my teammate, I wrote a simple file system simulator that works block by block on a single disk file.'
+      en: 'A teammate and I wrote a simple file system simulator that works block by block on a single disk file.'
     },
     built: {
       tr: '20 seçenekli bir menüyle dosya oluşturma, okuma, yazma, ekleme, kırpma, kopyalama, taşıma, karşılaştırma, birleştirme (defragment), bütünlük kontrolü, yedekleme / geri yükleme ve işlem logları yaptık.',
@@ -473,7 +473,7 @@ const ARCHIVE_PROJECTS = [
     team: { tr: 'Grup projesi', en: 'Team project' },
     description: {
       tr: 'Grup arkadaşımla, gerçek teslimat verilerinin dağılımını istatistiksel testlerle doğrulayıp teslim sürelerini simüle eden bir model kurduk.',
-      en: 'With my teammate, I validated the distribution of real delivery data with statistical tests and built a model that simulates delivery times.'
+      en: 'A teammate and I validated the distribution of real delivery data with statistical tests and built a model that simulates delivery times.'
     },
     built: {
       tr: 'Kaggle’daki “Food Delivery Route Efficiency” verisinin teslim sürelerini histogramla inceledik, Normal dağılım hipotezini Ki-Kare testiyle doğruladık (8,476 < 15,51). Ardından LCG ile rastgele sayı ürettik ve bu sayıların düzgün dağıldığını Kolmogorov–Smirnov testiyle kontrol ettik.',
@@ -652,10 +652,10 @@ const EXPERIENCE = [
     type: 'program',
     logo: { src: IMG + 'logos/bilisimvadisi.webp', alt: 'Bilişim Vadisi' },
     role: { tr: 'Girişimci (DermaAI ekibi)', en: 'Founder-in-training (DermaAI team)' },
-    meta: { tr: 'Eki 2025 – Şub 2026 · Gebze, Kocaeli', en: 'Oct 2025 – Feb 2026 · Gebze, Kocaeli' },
+    meta: { tr: 'Eki 2025 – Şub 2026 · Gebze ve uzaktan', en: 'Oct 2025 – Feb 2026 · Gebze & remote' },
     points: {
-      tr: ['DermaAI projemizle programa kabul edildik; girişimcilik, ürün geliştirme ve iş modeli üzerine eğitim, atölye ve mentorluk süreçlerine katıldım', 'Projede frontend geliştirmeyi ve yapay zeka servislerinin uygulamaya entegrasyonunu sürdürdüm', 'Teknik gelişimin yanında ürünleşme, iş modeli ve girişim stratejisi üzerinde çalıştım'],
-      en: ['Our DermaAI project was accepted into the program, where I took part in training, workshops and mentoring on entrepreneurship, product development and business models', 'I continued developing the frontend and integrating the AI services into the app', 'Alongside the technical work, I worked on productization, the business model and startup strategy']
+      tr: ['DermaAI projemizle programa kabul edildik; girişimcilik, ürün geliştirme ve iş modeli üzerine eğitim, atölye ve mentorluk süreçlerine katıldım', 'Program, Gebze’de ayda bir yapılan yüz yüze eğitimler ve aralardaki çevrim içi eğitimlerle hibrit olarak ilerledi', 'Projede frontend geliştirmeyi ve yapay zeka servislerinin uygulamaya entegrasyonunu sürdürdüm; ürünleşme ve iş modeli üzerinde de çalıştım'],
+      en: ['Our DermaAI project was accepted into the program, where I took part in training, workshops and mentoring on entrepreneurship, product development and business models', 'The program ran in a hybrid format, with monthly in-person sessions in Gebze and online training in between', 'I continued developing the frontend and integrating the AI services into the app, and also worked on productization and the business model']
     }
   },
   {
@@ -675,8 +675,8 @@ const EXPERIENCE = [
     role: { tr: 'Katılımcı', en: 'Trainee' },
     meta: { tr: 'Ara 2024 – Ağu 2025 · Uzaktan', en: 'Dec 2024 – Aug 2025 · Remote' },
     points: {
-      tr: ['DermaAI projesinde Gemini entegrasyonu ve frontend geliştirmeyi üstlendim; proje bootcamp finalisti oldu', 'Gerçek veri setleriyle yapay zeka, web uygulaması geliştirme ve harici servis entegrasyonu alanlarında uygulamalı deneyim kazandım'],
-      en: ['Took on the Gemini integration and frontend development of DermaAI, which became a bootcamp finalist', 'Gained hands-on experience in AI, web application development and external service integrations with real datasets']
+      tr: ['DermaAI projesinde Gemini entegrasyonu ve frontend geliştirmeyi üstlendim; proje bootcamp finalisti oldu', 'Yapay zeka ve web uygulaması geliştirmenin yanında proje yönetimi ve girişimcilik eğitimleri aldım', 'Gerçek veri setleriyle yapay zeka, web uygulaması geliştirme ve harici servis entegrasyonu alanlarında uygulamalı deneyim kazandım'],
+      en: ['Took on the Gemini integration and frontend development of DermaAI, which became a bootcamp finalist', 'Alongside AI and web application development, completed training in project management and entrepreneurship', 'Gained hands-on experience in AI, web application development and external service integrations with real datasets']
     }
   },
   {
@@ -685,23 +685,25 @@ const EXPERIENCE = [
     role: { tr: 'Yazılım Geliştirici (Stajyer)', en: 'Software Developer (Intern)' },
     meta: { tr: 'Temmuz 2024 · Ankara', en: 'July 2024 · Ankara' },
     points: {
-      tr: ['Kurumsal bir proje için gereksinim analizi yürüttüm', 'Projenin teknik dokümantasyonunu hazırladım'],
-      en: ['Carried out requirements analysis for an enterprise project', 'Prepared the project’s technical documentation']
+      tr: ['Kurumsal bir yazılım projesinin ihtiyaçlarını ekiple birlikte belirleyip gereksinim dokümanlarına dönüştürdüm', 'Projenin teknik dokümantasyonunu hazırladım'],
+      en: ['Worked with the team to identify the needs of an enterprise software project and turned them into requirements documents', 'Prepared the project’s technical documentation']
     }
   }
 ];
 
 /* ---------- Sertifikalar ve başarılar ---------- */
 
+// image: sertifikanın görseli (tools/optimize_images.py → web/certs/); üstüne gelince büyür
 const CERTIFICATES = [
-  { color: 'blue', year: '2025', name: { tr: 'Google Proje Yönetimi Profesyonel Sertifikası', en: 'Google Project Management Professional Certificate' }, issuer: 'Google' },
-  { color: 'amber', year: '2025', name: { tr: 'Bootcamp Finalisti (DermaAI)', en: 'Bootcamp Finalist (DermaAI)' }, issuer: 'YZTA' },
-  { color: 'rose', year: '2025', name: { tr: 'Web Uygulamaları Geliştirme Eğitimi', en: 'Web Application Development Training' }, issuer: 'YZTA' },
-  { color: 'green', year: '2024', name: { tr: 'Kotlin Programlama Dili', en: 'Kotlin Programming Language' }, issuer: 'BTK Akademi' },
-  { color: 'blue', year: '2025', name: { tr: 'BTK Akademi Hackathon — Katılımcı', en: 'BTK Akademi Hackathon — Participant' } },
-  { color: 'rose', year: '2025', name: { tr: 'Pupilica Hackathon — Katılımcı', en: 'Pupilica Hackathon — Participant' } },
-  { color: 'amber', year: '2025', name: { tr: 'YZTA Hackathon — Katılımcı', en: 'YZTA Hackathon — Participant' } },
-  { color: 'violet', year: '2025', name: { tr: 'YZTA 4.0 Ideathon — Katılımcı', en: 'YZTA 4.0 Ideathon — Participant' } }
+  { color: 'blue', year: '2025', name: { tr: 'Google Proje Yönetimi Profesyonel Sertifikası', en: 'Google Project Management Professional Certificate' }, issuer: 'Google', image: IMG + 'certs/google-proje-yonetimi.webp' },
+  { color: 'amber', year: '2025', name: { tr: 'Bootcamp Finalisti (DermaAI)', en: 'Bootcamp Finalist (DermaAI)' }, issuer: 'YZTA', image: IMG + 'certs/yzta-finalist.webp' },
+  { color: 'violet', year: '2025', name: { tr: 'Bootcamp Katılım Belgesi', en: 'Bootcamp Participation Certificate' }, issuer: 'YZTA', image: IMG + 'certs/yzta-bootcamp.webp' },
+  { color: 'green', year: '2025', name: { tr: 'Girişimcilik Eğitimleri', en: 'Entrepreneurship Training' }, issuer: 'YZTA', image: IMG + 'certs/girisimcilik.webp' },
+  { color: 'rose', year: '2025', name: { tr: 'Web Uygulamaları Geliştirme Eğitimi', en: 'Web Application Development Training' }, issuer: 'YZTA', image: IMG + 'certs/web-gelistirme.webp' },
+  { color: 'blue', year: '2024', name: { tr: 'Kotlin Programlama Dili', en: 'Kotlin Programming Language' }, issuer: 'BTK Akademi', image: IMG + 'certs/kotlin.webp' },
+  { color: 'amber', year: '2025', name: { tr: 'BTK Akademi Hackathon — Katılımcı', en: 'BTK Akademi Hackathon — Participant' }, image: IMG + 'certs/btk-hackathon.webp' },
+  { color: 'rose', year: '2025', name: { tr: 'Pupilica Hackathon — Katılımcı', en: 'Pupilica Hackathon — Participant' }, image: IMG + 'certs/pupilica-hackathon.webp' },
+  { color: 'violet', year: '2025', name: { tr: 'YZTA Hackathon — Katılımcı', en: 'YZTA Hackathon — Participant' }, image: IMG + 'certs/yzta-hackathon.webp' }
 ];
 
 /* ---------- Yetenekler ---------- */

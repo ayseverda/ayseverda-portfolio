@@ -16,6 +16,16 @@ IMAGES = [
     ("hero/image.png", "hero.webp", 1400, False),
     ("konsol-cozy.png", "konsol.webp", 992, False),  # Cozy Cafe videosunun oynadığı konsol (tools/draw_console.py çizer)
     (GAME + "tavsan2.png", "contact.webp", 900, False),
+    # Sertifikalar
+    ("yzta-finalist.jpg", "certs/yzta-finalist.webp", 1000, False),
+    ("yzta-bootcamp.jpg", "certs/yzta-bootcamp.webp", 1000, False),
+    ("girisimcilik.jpg", "certs/girisimcilik.webp", 1000, False),
+    ("web-gelistirme.png", "certs/web-gelistirme.webp", 1000, False),
+    ("google-proje-yonetimi.jpeg", "certs/google-proje-yonetimi.webp", 1000, False),
+    ("kotlin.jpg", "certs/kotlin.webp", 1000, False),
+    ("ankara-btk-hackathon.jpg", "certs/btk-hackathon.webp", 1000, False),
+    ("pupilica-hackathon.jpg", "certs/pupilica-hackathon.webp", 1000, False),
+    ("hackathon.jpg", "certs/yzta-hackathon.webp", 1000, False),
     # Logolar
     ("sau.png", "logos/sau.webp", 360, True),
     ("argede.png", "logos/argede.webp", 360, True),
