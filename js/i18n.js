@@ -59,7 +59,7 @@ const PAGE_EN = {
   'education.communityTitle': 'Community &amp; volunteering',
   'education.community': '<li>Spent 2.5 years on the management team of the SAÜ Artificial Intelligence Community, contributing to the community’s social media. In 2024, our community won second place in the “Most Active Student Community on Social Media” category.</li><li>Ran the club’s social media for a year as part of the Fikir ile Gelecek Club’s social media team.</li>',
   'education.languageTitle': 'Languages:',
-  'education.language': 'English (B1+)',
+  'education.language': 'English (Intermediate)',
   'certificates.eyebrow': 'ACHIEVEMENTS &amp; CERTIFICATES',
 
   'archive.title': 'More',
