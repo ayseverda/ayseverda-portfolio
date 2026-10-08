@@ -532,8 +532,9 @@ body.video-open { overflow: hidden; }
 .modal-body h2 { font-size: clamp(24px, 3vw, 32px); }
 .modal-desc { margin: 10px 0 22px; color: var(--ink-soft); font-size: 17px; }
 .modal-gallery { display: flex; gap: 12px; margin-bottom: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
-.modal-gallery figure { flex: 0 0 auto; height: 280px; margin: 0; padding: 8px; border-radius: 12px; background: var(--bg-soft); scroll-snap-align: start; }
-.modal-gallery img { height: 100%; width: auto; max-width: 640px; object-fit: contain; border-radius: 6px; }
+.modal-gallery figure { flex: 0 0 auto; margin: 0; padding: 8px; border-radius: 12px; background: var(--bg-soft); scroll-snap-align: start; }
+/* Yükseklik piksel: Safari yüzde yükseklikte kutu genişliğini yanlış hesaplayıp resimleri üst üste bindiriyor */
+.modal-gallery img { display: block; height: 264px; width: auto; max-width: min(640px, 76vw); object-fit: contain; border-radius: 6px; }
 .modal-section { margin-top: 18px; }
 .modal-section h3 { margin-bottom: 4px; color: var(--accent); font-size: 13px; font-weight: 800; letter-spacing: 0.1em; }
 .modal-section p { color: var(--ink-soft); }
@@ -632,7 +633,7 @@ body.video-open { overflow: hidden; }
   .edu-head img { width: 56px; }
   .contact-grid { grid-template-columns: 1fr; }
   .modal-body { padding: 28px 20px 28px; }
-  .modal-gallery figure { height: 200px; }
+  .modal-gallery img { height: 184px; }
 }
 
 /* Çok dar ekranlar: arşiv kartı yeniden dikey (görsel üstte) */
