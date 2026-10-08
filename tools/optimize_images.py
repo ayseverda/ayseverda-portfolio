@@ -15,7 +15,7 @@ GAME = "oyun-assets/assets/"
 IMAGES = [
     ("hero/image.png", "hero.webp", 1400, False),
     ("konsol-cozy.png", "konsol.webp", 992, False),  # Cozy Cafe videosunun oynadığı konsol (tools/draw_console.py çizer)
-    (GAME + "tavsan2.png", "contact.webp", 900, False),
+    ("hero/veda.png", "contact.webp", 1000, True),  # iletişim bölümündeki veda çizimi
     # Sertifikalar
     ("yzta-finalist.jpg", "certs/yzta-finalist.webp", 1000, False),
     ("yzta-bootcamp.jpg", "certs/yzta-bootcamp.webp", 1000, False),

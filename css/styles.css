@@ -75,7 +75,7 @@ h2 em { font-style: normal; color: var(--accent); }
 [hidden] { display: none !important; }
 
 .container { width: min(var(--container), calc(100% - 48px)); margin-inline: auto; }
-.section { padding: 48px 0; }
+.section { padding: 34px 0; }
 
 .icon { width: 18px; height: 18px; flex: none; }
 
@@ -484,14 +484,17 @@ h2 em { font-style: normal; color: var(--accent); }
 
 /* 14. İletişim ----------------------------------------------------------- */
 .contact { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%); }
-.contact-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 32px; align-items: center; }
+/* Üste yaslı: uzun çizim, başlığı aşağı itmesin */
+.contact-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 32px; align-items: start; }
 .contact h2 { font-size: clamp(26px, 3vw, 36px); }
 .contact-cta { margin-top: 8px; color: var(--accent); font-family: var(--font-display); font-size: clamp(26px, 3vw, 36px); font-weight: 800; }
 .contact-links { display: grid; gap: 14px; }
 .contact-links a, .contact-links span { display: inline-flex; align-items: center; gap: 10px; font-weight: 500; }
 .contact-links a:hover { color: var(--accent); }
 .contact-links .icon { color: var(--primary); }
-.contact-art img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); image-rendering: pixelated; }
+/* Çizim sayfanın sağ kenarına yapışmasın: biraz küçük ve sütunun soluna yaslı */
+.contact-art { justify-self: start; width: min(85%, 400px); }
+.contact-art img { width: 100%; filter: drop-shadow(0 16px 24px rgb(31 42 68 / 10%)); }
 
 /* 15. Alt bilgi ---------------------------------------------------------- */
 .site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
@@ -589,7 +592,7 @@ body.video-open { overflow: hidden; }
   .now-roles ul { font-size: 16px; }
   :root { --header-height: 64px; }
   .container, .header-inner { width: calc(100% - 32px); }
-  .section { padding: 38px 0; }
+  .section { padding: 28px 0; }
   .brand span { display: none; }
   .header-actions .btn span { display: none; }
   .hero-actions .btn { padding: 10px 14px; font-size: 14px; }

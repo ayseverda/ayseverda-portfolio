@@ -96,7 +96,7 @@ const FEATURED_PROJECTS = [
     id: 'derma',
     video: 'I9QDYyXa__0',
     theme: 'lilac',
-    badge: { tr: 'Google Yapay Zeka ve Teknoloji Akademisi · Bootcamp Finalisti', en: 'Google AI & Technology Academy · Bootcamp Finalist' },
+    badge: { tr: 'Bootcamp Finalisti', en: 'Bootcamp Finalist' },
     filters: ['ai', 'vision', 'web', 'backend'],
     name: { tr: 'DermaAI', en: 'DermaAI' },
     category: { tr: 'YAPAY ZEKA · BİLGİSAYARLI GÖRÜ · SAĞLIK', en: 'AI · COMPUTER VISION · HEALTHCARE' },

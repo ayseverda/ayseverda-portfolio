@@ -21,7 +21,6 @@ const PAGE_EN = {
   'hero.tagline': 'Most of my projects started with one question: “can I build this?”',
   'hero.desc': 'I’m a computer engineer building AI, backend and software projects.',
   'hero.cta': 'View Projects',
-  'hero.contact': 'Contact',
   'hero.status': 'Open to opportunities',
   'hero.location': 'Ankara, Türkiye',
   'hero.artAlt': 'Ayşe working at a cozy desk with her cat, plants and laptop',
@@ -78,8 +77,8 @@ const PAGE_EN = {
   'now.roles': '<li>Junior Software Engineer</li><li>AI Engineer</li><li>Backend Engineer</li><li>AI Product Engineer</li><li>Computer Vision Engineer</li>',
   'now.play': 'Try the mini game',
 
-  'contact.title': 'Have a project, opportunity, or interesting problem?',
-  'contact.cta': 'Let’s talk.',
+  'contact.title': 'Got something that makes you wonder “can this be done?”',
+  'contact.cta': 'Let’s look at it together.',
 
   'footer.note': 'Made with curiosity in Ankara.',
   'footer.top': 'Back to top ↑',
