@@ -32,7 +32,6 @@
   --tone-periwinkle: #e1e7fb;
   --tone-aqua: #e0f2f8;
   --tone-pink: #fde6f0;
-  --tone-mint: #e2f4ee;
 
   --radius-sm: 10px;
   --radius: 16px;
@@ -116,10 +115,6 @@ h2 em { font-style: normal; color: var(--accent); }
 .btn-soft { background: var(--accent-soft); color: var(--primary-dark); }
 .btn-soft:hover { background: #fad0e2; }
 .btn-light { background: var(--surface); color: var(--ink); border-color: rgb(31 42 68 / 10%); box-shadow: var(--shadow-sm); }
-.btn-rose { background: var(--rose); color: #fff; }
-.btn-rose:hover { background: #e9659b; }
-.btn-ghost-light { background: rgb(255 255 255 / 8%); border-color: rgb(255 255 255 / 55%); color: #fff; }
-.btn-ghost-light:hover { background: rgb(255 255 255 / 18%); }
 
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tags span {
@@ -134,7 +129,6 @@ h2 em { font-style: normal; color: var(--accent); }
 .tags .tag-soon { border-style: dashed; }
 .tag-soon small { margin-left: 4px; padding: 1px 6px; border-radius: 999px; background: var(--tone-pink); color: var(--primary-dark); font-size: 11px; font-weight: 700; }
 .tags-sm span { padding: 3px 8px; font-size: 12px; }
-.tags-dark span { background: rgb(255 255 255 / 12%); border-color: rgb(255 255 255 / 30%); color: #fff; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
@@ -161,7 +155,6 @@ h2 em { font-style: normal; color: var(--accent); }
 .tone-periwinkle { background: var(--tone-periwinkle); }
 .tone-aqua { background: var(--tone-aqua); }
 .tone-pink { background: var(--tone-pink); }
-.tone-mint { background: var(--tone-mint); }
 
 /* 4. Üst menü ------------------------------------------------------------ */
 /* Sayfa en üstteyken menü tam genişlikte ve şeffaf; aşağı kaydırınca küçülüp
@@ -439,15 +432,11 @@ h2 em { font-style: normal; color: var(--accent); }
 .fit-contain img { object-fit: contain; filter: drop-shadow(0 6px 12px rgb(0 0 0 / 12%)); }
 .tone-dark { background: #1d1d22; }
 /* Mockup görselleri (telefon / laptop) saydam arka planlıdır; arkada yumuşak bir degrade durur */
-.tone-device { background: linear-gradient(135deg, var(--tone-ice), var(--tone-pink)); }
-.tone-device.fit-contain { padding: 10px; }
 .thumb-placeholder { display: grid; place-items: center; }
 .thumb-placeholder span { padding: 10px 18px; border-radius: 12px; background: rgb(255 255 255 / 70%); font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--primary-dark); box-shadow: var(--shadow-sm); }
 .cat-ai { background: linear-gradient(135deg, #f1edff, #dcd3fb); }
-.cat-vision { background: linear-gradient(135deg, #eef3ff, #d7e2fb); }
 .cat-backend, .cat-data { background: linear-gradient(135deg, #ebf8fc, #cfe8f3); }
 .cat-web { background: linear-gradient(135deg, #eef5ff, #d5e5fb); }
-.cat-mobile { background: linear-gradient(135deg, #fdeff3, #f8d5df); }
 .cat-systems { background: linear-gradient(135deg, #f0f3f9, #dce3f0); }
 .cat-cpp { background: linear-gradient(135deg, #eef3fb, #d6e1f2); }
 .cat-iot { background: linear-gradient(135deg, #f1f0ff, #dbd9f8); }
@@ -580,7 +569,7 @@ body.video-open { overflow: hidden; }
   .hero-grid { grid-template-columns: 1fr; min-height: 0; padding-top: 32px; }
   .hero-art { order: -1; }
   .hero-art img { width: 100%; margin: 0; }
-  .education-grid, .game-card { grid-template-columns: 1fr; }
+  .education-grid { grid-template-columns: 1fr; }
   .featured-grid { grid-template-columns: 1fr; }
   .project-card { grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); }
   .project-card-body { padding: 26px 8px 26px 26px; }

@@ -22,7 +22,7 @@ js/i18n.js               İngilizce metinler ve arayüz çevirileri
 js/main.js               Sayfa davranışı, proje penceresi, video sahnesi
 js/game.js               Cozy Cafe mini oyunu
 project-assets/web/      Sitede kullanılan optimize görseller
-tools/                   Görsel optimizasyonu ve konsol çizimi (Python + Pillow)
+tools/                   Görsel optimizasyonu (Python + Pillow)
 ```
 
 ## Yerelde çalıştırma

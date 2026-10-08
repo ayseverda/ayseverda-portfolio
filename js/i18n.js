@@ -80,7 +80,6 @@ const PAGE_EN = {
   'contact.title': 'Got something that makes you wonder “can this be done?”',
   'contact.cta': 'Let’s look at it together.',
 
-  'footer.note': 'Made with curiosity in Ankara.',
   'footer.top': 'Back to top ↑',
 
   'modal.close': 'Close project details',
@@ -94,7 +93,6 @@ const UI_TEXT = {
     watchVideo: 'Videoyu izle',
     viewCertificate: 'sertifikayı görüntüle',
     openDetails: 'ayrıntılarını aç',
-    notebook: 'PROJE DEFTERİ',
     problem: 'PROBLEM',
     built: 'NE GELİŞTİRDİM',
     approach: 'TEKNİK YAKLAŞIM',
@@ -128,7 +126,6 @@ const UI_TEXT = {
     watchVideo: 'Watch video',
     viewCertificate: 'view certificate',
     openDetails: 'open details',
-    notebook: 'PROJECT NOTEBOOK',
     problem: 'THE PROBLEM',
     built: 'WHAT I BUILT',
     approach: 'TECHNICAL APPROACH',

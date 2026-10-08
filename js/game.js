@@ -1,11 +1,3 @@
-// Cozy Café mini oyunu: kafe, bahçe ve mutfaktan oluşan küçük bir döngü.
-//   Bahçe  → ekinleri topla (havuç, çilek, salatalık, buğday, elma)
-//   Mutfak → tarifle yiyecek hazırla
-//   Kafe   → müşterinin balonda istediği yiyeceği vitrinden ver
-// Tüm çizimler project-assets/oyun-assets/assets/ altındaki orijinal oyun dosyalarıdır.
-// Sahne 320×240 piksel çizilir, CSS ile keskin (pixelated) büyütülür.
-// Oyun konsol açılınca yüklenir ve her açılışta baştan başlar (window.CozyGame, bkz. js/main.js).
-
 (() => {
   const ASSETS = 'project-assets/oyun-assets/assets/';
   const SOUND_STORAGE_KEY = 'portfolio-sound';
@@ -22,7 +14,7 @@
     apple: 'apple.png'
   };
 
-  // Vitrin (kafe) ve tarifler (mutfak). scale: küçük çizilmiş yiyecekleri biraz büyütür.
+  // Vitrin (kafe) ve tarifler (mutfak).
   const FOODS = [
     { id: 'cake', src: 'carrot_cake.png', shelf: { x: 255, y: 97 }, recipe: { carrot: 2, wheat: 1 } },
     { id: 'granola', src: 'granola.png', shelf: { x: 283, y: 99 }, scale: 1.35, recipe: { wheat: 1, apple: 1 } },

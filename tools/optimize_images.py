@@ -14,7 +14,7 @@ GAME = "oyun-assets/assets/"
 # (kaynak, hedef, en büyük genişlik, kenar boşluklarını kırp[, kırpma kutusu])
 IMAGES = [
     ("hero/image.png", "hero.webp", 1400, False),
-    ("konsol-cozy.png", "konsol.webp", 992, False),  # Cozy Cafe videosunun oynadığı konsol (tools/draw_console.py çizer)
+    ("konsol-cozy.png", "konsol.webp", 992, False),  # Cozy Cafe videosunun oynadığı konsol
     ("hero/veda.png", "contact.webp", 1000, True),  # iletişim bölümündeki veda çizimi
     # Sertifikalar
     ("yzta-finalist.jpg", "certs/yzta-finalist.webp", 1000, False),
@@ -150,40 +150,30 @@ def main() -> None:
 
 
 # ---------------------------------------------------------------------------
-# Cihaz mockup'ları: ekran görüntüleri telefon / laptop çerçevesinin içine yerleştirilir.
+# Cihaz mockup'ları: ekran görüntüleri telefon / laptop / konsol çerçevesinin içine yerleştirilir.
 # Kaynaklar yukarıda üretilen web kopyalarıdır (OCR gizlilik maskesi korunur).
-# (cihaz, kaynak web görseli, hedef, ekrana yerleştirme: 'cover' | 'width')
-#   cover → ekranı doldurur (üstten hizalı); width → genişliğe sığar, kalan alan
-#   ekran görüntüsünün alt kenar rengiyle doldurulur (telefon oranında olmayan ekranlar için).
-# (dosya, çıktı genişliği, açık nötr arka planı temizle)
-# apple-iphone-11.png'de "saydamlık" görselin içine gömülü bir dama deseni; o yüzden temizlenir.
+# Ekran görüntüsü ekranı doldurur (üstten hizalı).
+# (cihaz dosyası, çıktı genişliği)
 DEVICES = {
-    "phone": ("apple-iphone-11.png", 420, True),
-    "iphone": ("iphone.png", 420, False),  # yüz felci projesinin telefonu
-    "laptop": ("laptop.png", 1100, False),
-    "console": ("konsol-cozy.png", 760, False),
+    "iphone": ("iphone.png", 420),  # yüz felci projesinin telefonu
+    "laptop": ("laptop.png", 1100),
+    "console": ("konsol-cozy.png", 760),
 }
+# (cihaz, kaynak web görseli, hedef)
 MOCKUPS = [
-    ("console", "projects/cozzy-bahce.webp", "mockups/cozy-console.webp", "cover"),
-    ("laptop", "projects/ocr-cover.webp", "mockups/ocr-laptop.webp", "cover"),
-    ("laptop", "projects/dermai-cover.webp", "mockups/dermai-laptop.webp", "cover"),
-    ("laptop", "projects/ieltsgo-homepage.webp", "mockups/ieltsgo-laptop.webp", "cover"),
-    ("iphone", "projects/facial-phone1.webp", "mockups/facial-iphone1.webp", "cover"),
-    ("iphone", "projects/facial-phone2.webp", "mockups/facial-iphone2.webp", "cover"),
+    ("console", "projects/cozzy-bahce.webp", "mockups/cozy-console.webp"),
+    ("laptop", "projects/ocr-cover.webp", "mockups/ocr-laptop.webp"),
+    ("laptop", "projects/dermai-cover.webp", "mockups/dermai-laptop.webp"),
+    ("laptop", "projects/ieltsgo-homepage.webp", "mockups/ieltsgo-laptop.webp"),
+    ("iphone", "projects/facial-phone1.webp", "mockups/facial-iphone1.webp"),
+    ("iphone", "projects/facial-phone2.webp", "mockups/facial-iphone2.webp"),
 ]
 
 
-def load_device(file_name: str, clear_light: bool):
-    """Çerçeveyi yükler; soluk arka plan piksellerini siler, ekranın maskesini bulur."""
-    from PIL import ImageDraw
+def load_device(file_name: str):
+    """Çerçeveyi yükler ve ekranın maskesini bulur."""
+    from PIL import ImageChops, ImageDraw
     frame = Image.open(ROOT / file_name).convert("RGBA")
-    if clear_light:
-        pixels = frame.load()
-        for y in range(frame.height):
-            for x in range(frame.width):
-                r, g, b, a = pixels[x, y]
-                if min(r, g, b) >= 170 and max(r, g, b) - min(r, g, b) < 18:
-                    pixels[x, y] = (r, g, b, 0)
     alpha = frame.getchannel("A").point(lambda a: 0 if a < 40 else a)
     frame.putalpha(alpha)
     frame = frame.crop(alpha.getbbox())
@@ -194,38 +184,21 @@ def load_device(file_name: str, clear_light: bool):
     ImageDraw.floodfill(probe, center, 128)
     screen_mask = probe.point(lambda v: 255 if v == 128 else 0)
     # Ekrandaki cam/parlama katmanını kaldır ki görüntü soluk görünmesin
-    from PIL import ImageChops
     frame.putalpha(ImageChops.multiply(frame.getchannel("A"), ImageChops.invert(screen_mask)))
     return frame, screen_mask
 
 
-def dominant_color(image: Image.Image) -> tuple:
-    """Ekran görüntüsünün baskın rengi (uygulamanın arka planı); boş ekran alanını doldurmak için."""
-    small = image.convert("RGB").resize((80, 80)).quantize(colors=8)
-    palette = small.getpalette()
-    index = max(small.getcolors(), key=lambda item: item[0])[1]
-    return tuple(palette[index * 3:index * 3 + 3])
-
-
 def make_mockups() -> None:
-    devices = {name: load_device(file, clear) + (width,) for name, (file, width, clear) in DEVICES.items()}
-    for device, source, target, fit in MOCKUPS:
+    devices = {name: load_device(file) + (width,) for name, (file, width) in DEVICES.items()}
+    for device, source, target in MOCKUPS:
         frame, mask, out_width = devices[device]
         box = mask.getbbox()
         screen_w, screen_h = box[2] - box[0], box[3] - box[1]
         shot = Image.open(OUT / source).convert("RGB")
-        if fit == "width":
-            shot = shot.crop((4, 4, shot.width - 4, shot.height - 4))  # rapordan gelen ince kenar çizgisi
-        canvas = Image.new("RGB", (screen_w, screen_h), dominant_color(shot))
-        if fit == "cover":
-            scale = max(screen_w / shot.width, screen_h / shot.height)
-            resized = shot.resize((round(shot.width * scale), round(shot.height * scale)), Image.LANCZOS)
-            canvas.paste(resized, (0, 0))
-        else:
-            # Çentiğin altında kalmaması için üstten biraz boşluk; o şerit de üst kenar rengiyle dolar
-            notch = round(screen_h * 0.045)
-            resized = shot.resize((screen_w, round(shot.height * screen_w / shot.width)), Image.LANCZOS)
-            canvas.paste(resized, (0, notch))
+        scale = max(screen_w / shot.width, screen_h / shot.height)
+        resized = shot.resize((round(shot.width * scale), round(shot.height * scale)), Image.LANCZOS)
+        canvas = Image.new("RGB", (screen_w, screen_h))
+        canvas.paste(resized, (0, 0))
         result = Image.new("RGBA", frame.size, (0, 0, 0, 0))
         result.paste(canvas, box[:2], mask.crop(box))
         result.alpha_composite(frame)
@@ -234,23 +207,6 @@ def make_mockups() -> None:
         destination.parent.mkdir(parents=True, exist_ok=True)
         result.save(destination, "WEBP", quality=85, method=6)
         print(f"{target:38} {result.width}x{result.height}  {destination.stat().st_size // 1024} KB")
-
-
-def make_phone_group(sources, target, height=520):
-    """Telefon mockup'larını yelpaze gibi dizer: yanlar hafif küçük ve eğik, ortadaki önde."""
-    phones = [Image.open(OUT / name).convert("RGBA") for name in sources]
-    side_h, mid_h = int(height * 0.86), height
-    left = phones[0].resize((round(phones[0].width * side_h / phones[0].height), side_h), Image.LANCZOS).rotate(6, expand=True, resample=Image.BICUBIC)
-    right = phones[2].resize((round(phones[2].width * side_h / phones[2].height), side_h), Image.LANCZOS).rotate(-6, expand=True, resample=Image.BICUBIC)
-    mid = phones[1].resize((round(phones[1].width * mid_h / phones[1].height), mid_h), Image.LANCZOS)
-    overlap = int(mid.width * 0.32)
-    width = left.width + mid.width + right.width - 2 * overlap
-    canvas = Image.new("RGBA", (width, max(left.height, mid.height, right.height)), (0, 0, 0, 0))
-    canvas.alpha_composite(left, (0, (canvas.height - left.height) // 2 + 10))
-    canvas.alpha_composite(right, (width - right.width, (canvas.height - right.height) // 2 + 10))
-    canvas.alpha_composite(mid, (left.width - overlap, (canvas.height - mid.height) // 2))
-    canvas.save(OUT / target, "WEBP", quality=85, method=6)
-    print(f"{target:38} {canvas.width}x{canvas.height}  {(OUT / target).stat().st_size // 1024} KB")
 
 
 if __name__ == "__main__":

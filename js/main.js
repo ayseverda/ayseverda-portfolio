@@ -74,7 +74,7 @@ function featuredVisualHtml(visual, video) {
   return phones + (video ? playButtonHtml(video) : '');
 }
 
-// Oynat butonunun yerine laptop ekranında YouTube oynatıcısını açar.
+
 const playButtonHtml = video => `
   <button type="button" class="video-play" data-video="${video}" aria-label="${ui().watchVideo}">
     ${icon('play')}
@@ -82,24 +82,21 @@ const playButtonHtml = video => `
 
 const youtubeIframe = id => `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="${ui().watchVideo}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
 
-/* ---------- Video sahnesi ----------
-   "Videoyu izle"ye basınca karttaki cihaz (laptop ya da telefon) yerinden kalkar, büyüyerek
-   ekranın ortasına gelir, arka plan kararır ve video cihazın ekranında oynar.
-   Kapatınca aynı yoldan kartındaki yerine geri döner. */
 
-// laptop.png'de ekranın konumu (yüzde olarak; tools/optimize_images.py ile ölçüldü)
+
+
 const LAPTOP_SCREEN = { left: 11.97, top: 5.95, width: 76.14, height: 81.16 };
 const LAPTOP_RATIO = 1203 / 706;
-// iphone.png içindeki ekran alanı (tools/optimize_images.py ile ölçüldü)
+
 const PHONE_SCREEN = { left: 5.43, top: 2.48, width: 88.73, height: 95.45 };
 const PHONE_RATIO = 497 / 966;
-// konsol-cozy.png içindeki ekran alanı (tools/draw_console.py: 96×72 piksel, ×8)
+
 const CONSOLE_SCREEN = { left: 11.29, top: 12, width: 77.42, height: 48 };
 const CONSOLE_RATIO = 992 / 1200;
 const ZOOM_EASING = 'cubic-bezier(.2, .8, .2, 1)';
 const videoState = { source: null, open: false };
 
-// Cihazın sahnedeki son boyutu: ekrana sığan en büyük hal
+
 function stageSize(kind) {
   const maxW = Math.min(window.innerWidth * 0.92, 1180);
   const maxH = window.innerHeight * 0.84;
@@ -112,7 +109,7 @@ function stageSize(kind) {
   return { width: height * 9 / 16 * 1.04, height };
 }
 
-// Kaynak eleman görünmüyorsa (ör. filtrelenmiş kart) cihaz ekranın ortasından küçükten büyür
+
 function visibleRect(element) {
   const rect = element.getBoundingClientRect();
   if (rect.width && rect.height) return rect;
@@ -120,7 +117,6 @@ function visibleRect(element) {
   return { left: (window.innerWidth - size) / 2, top: (window.innerHeight - size) / 2, width: size, height: size };
 }
 
-// Kaynak elemandan sahnedeki cihaza kaydırma + tek tip ölçek (oran bozulmaz, cihaz esnemez)
 function flipTransform(from, to) {
   const dx = (from.left + from.width / 2) - (to.left + to.width / 2);
   const dy = (from.top + from.height / 2) - (to.top + to.height / 2);
@@ -128,7 +124,7 @@ function flipTransform(from, to) {
   return `translate(${dx}px, ${dy}px) scale(${scale})`;
 }
 
-// Konsolu oyun modunda açar: oyun (js/game.js) konsolun ekranına taşınır.
+
 function openGame() {
   window.CozyGame?.reset();
   playVideo($('#cozy .video-play'), 'game');
@@ -137,7 +133,7 @@ function openGame() {
 function playVideo(button, mode = 'video') {
   if (videoState.open) return;
   videoState.mode = mode;
-  // Cihaz türü: Cozy Cafe'de konsol, laptop'lı kartlarda laptop, diğerlerinde telefon
+  
   const visual = button.closest('.project-card-visual');
   const kind = button.dataset.device || (visual.classList.contains('layout-laptop') ? 'laptop' : 'phone');
   const source = kind === 'console' ? button.closest('.cozy-console').querySelector('.console-mockup')
@@ -516,8 +512,7 @@ function bindEvents() {
   bindMailLink();
 }
 
-// Bilgisayarda çoğu kişide mail programı kurulu değil, mailto tıklanınca hiçbir şey olmuyor.
-// Fareli cihazlarda Gmail'in yeni mail penceresi açılır; telefonda mailto mail uygulamasını açar.
+
 function bindMailLink() {
   const link = $('a[href^="mailto:"]');
   if (!link || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;

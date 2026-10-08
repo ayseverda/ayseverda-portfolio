@@ -2,14 +2,12 @@
 # Portfolyo — repoya sadece sitenin çalışması için gerekenler girer
 # ---------------------------------------------------------------
 
-# Kişisel / özel içerik: asla yüklenmez
-# raporlar, makale taslağı, sınıf arkadaşlarının isim ve numaraları
-proje-aciklama/
-# eski site kodu
-_eski-surum/
 
-# project-assets: orijinal görseller yerelde kalır (OCR orijinallerinde kimlik bilgisi var!).
-# Site yalnızca web/ altındaki optimize kopyaları (tools/optimize_images.py), CV'yi ve
+proje-aciklama/
+
+
+# project-assets: orijinal görseller yerelde kalır
+# Site yalnızca web/ altındaki optimize kopyaları 
 # mini oyunun kullandığı oyun dosyalarını kullanır.
 project-assets/*
 !project-assets/web/
