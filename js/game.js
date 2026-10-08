@@ -74,7 +74,7 @@
       shake: 0,
       score: 0,
       lastFrame: 0,
-      // Başlangıçta vitrinde her yiyecekten bir tane var; malzemeler bahçeden toplanır
+      // Vitrinde her yiyecekten bir tane; malzemeler bahçeden toplanır
       stock: Object.fromEntries([...Object.keys(INGREDIENTS).map(key => [key, 0]), ...FOODS.map(food => [food.id, 1])]),
       plots: PLOTS.map(() => ({ growth: GROW_TIME })),
       apples: TREE.apples.map(() => true),
@@ -147,7 +147,7 @@
     ctx.drawImage(sheet, (frameIndex % frames) * width, 0, width, sheet.height, x, y, width, sheet.height);
   }
 
-  // Krem renkli, kahverengi kenarlı küçük kart (oyunun arayüz paletinde)
+  // Oyunun arayüz paletinde küçük kart
   function drawCard([x0, y0, x1, y1], highlight) {
     ctx.fillStyle = highlight ? '#fff6d8' : '#fdf3e3';
     ctx.strokeStyle = highlight ? '#e47aa7' : '#8a5a48';
@@ -450,7 +450,7 @@
   });
   document.addEventListener('languagechange', () => { renderTabs(); renderInventory(); });
 
-  // Ekranda değilken çizim döngüsü durur
+  // Ekranda değilken çizim durur
   new IntersectionObserver(([entry]) => {
     game.visible = entry.isIntersecting;
     resumeLoop();

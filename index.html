@@ -20,9 +20,9 @@
 <!--
   Çeviri sistemi:
   - Türkçe metinler bu dosyada durur (varsayılan dil).
-  - data-i18n="anahtar"                     → öğenin içeriği js/i18n.js > PAGE_EN[anahtar] ile değişir.
-  - data-i18n-attr="öznitelik:anahtar, ..." → aria-label, alt gibi öznitelikler için aynısı.
-  - Projeler, deneyim, sertifikalar ve yetenekler js/data.js'den JavaScript ile oluşturulur.
+  - data-i18n="anahtar"                     → İngilizcesi js/i18n.js > PAGE_EN[anahtar]
+  - data-i18n-attr="öznitelik:anahtar, ..." → aria-label, alt gibi öznitelikler için
+  - Projeler, deneyim, sertifikalar ve yetenekler js/data.js'den oluşturulur.
 -->
 <body>
   <!-- Sayfada tekrar kullanılan ikonlar -->
@@ -116,7 +116,7 @@
               <button type="button" class="btn btn-light" data-open-cozy data-i18n="cozy.details">Ayrıntılar</button>
             </div>
           </div>
-          <!-- Konsol mockup'ı (tools/optimize_images.py); video bu konsolun ekranında açılır (js/main.js > playVideo) -->
+          <!-- Konsol mockup'ı; video konsolun ekranında açılır -->
           <div class="cozy-console">
             <img class="console-mockup" src="project-assets/web/mockups/cozy-console.webp" alt="Pembe piksel konsol ekranında Cozy Cafe oyunu" data-i18n-attr="alt:cozy.consoleAlt" loading="lazy">
             <button type="button" class="video-play" data-video="TgSV400EX8c" data-device="console" aria-label="Videoyu izle" data-i18n-attr="aria-label:cozy.watch">
@@ -207,7 +207,7 @@
       </div>
     </section>
 
-    <!-- Şu anda: Cozy Cafe çizimleri ipe mandalla asılı polaroidler; yanında aradığım roller -->
+    <!-- Şu anda: ipte Cozy Cafe polaroidleri ve açık olduğum roller -->
     <section class="section now">
       <div class="container now-layout">
         <div class="now-building">
@@ -273,7 +273,7 @@
     </div>
   </footer>
 
-  <!-- Mini oyun (js/game.js). Normalde gizli; "Oyna" denince konsolun ekranına taşınır (js/main.js > openConsole) -->
+  <!-- Mini oyun: gizli durur, konsol açılınca ekranına taşınır (main.js > openGame) -->
   <div class="game-holder" id="game-holder" hidden>
     <div class="game-screen" id="game-screen">
       <canvas id="game-canvas" width="320" height="240" aria-label="Cozy Café mini oyunu" data-i18n-attr="aria-label:game.canvasLabel"></canvas>
@@ -293,7 +293,7 @@
     </div>
   </div>
 
-  <!-- Video sahnesi: karttaki laptop / telefon yerinden kalkıp büyüyerek buraya gelir (js/main.js > playVideo) -->
+  <!-- Video sahnesi: karttaki cihaz büyüyerek buraya gelir (main.js > playVideo) -->
   <div class="video-stage" id="video-stage" hidden>
     <div class="video-backdrop" data-close-video></div>
     <button type="button" class="video-close" data-close-video aria-label="Videoyu kapat" data-i18n-attr="aria-label:modal.closeVideo">×</button>

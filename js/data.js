@@ -1,13 +1,13 @@
-// Sitedeki tüm içerik verileri: projeler, deneyim, eğitim, sertifikalar ve yetenekler.
-// Çevrilen her alan { tr, en } çifti olarak tutulur; main.js aktif dile göre seçer.
-// Görseller project-assets/web/ altındaki optimize kopyalardır (bkz. tools/optimize_images.py).
+// Site içeriği: projeler, deneyim, sertifikalar ve yetenekler.
+// Çevrilen alanlar { tr, en } çiftidir.
+// Görseller project-assets/web/ altında (tools/optimize_images.py üretir).
 
 const IMG = 'project-assets/web/';
 
 /* ---------- Öne çıkan projeler ---------- */
-// visual.layout: 'phones' (iki telefon yan yana) | 'laptop' (laptop mockup'ı, bkz. tools/optimize_images.py)
-// video: YouTube video kimliği; varsa laptop ekranında oynatılabilir.
-// filters: proje filtrelerindeki anahtarlar (bkz. PROJECT_FILTERS)
+// visual.layout: 'laptop' | 'phones'
+// video: YouTube video kimliği; kartta oynat butonu çıkar
+// filters: PROJECT_FILTERS anahtarları
 
 const FEATURED_PROJECTS = [
   {
@@ -134,7 +134,7 @@ const FEATURED_PROJECTS = [
   },
   {
     id: 'ielts',
-    video: 'CimrOaKrc9Q', // YouTube video kimliği (youtu.be/ sonrasındaki kısım)
+    video: 'CimrOaKrc9Q', // youtu.be/ sonrasındaki kısım
     theme: 'aqua',
     badge: { tr: 'Hackathon', en: 'Hackathon' },
     filters: ['ai', 'web', 'backend'],
@@ -174,7 +174,7 @@ const FEATURED_PROJECTS = [
   }
 ];
 
-// Cozy Café ayrı, geniş bir afiş olarak gösterilir.
+// Cozy Café: ayrı, geniş afiş
 const COZY_PROJECT = {
   id: 'cozy',
   filters: ['game'],
@@ -212,14 +212,13 @@ const COZY_PROJECT = {
   gallery: ['cozzy-cover', 'cozzy', 'cozzy-mutfak', 'cozzy-bahce']
 };
 
-// Öne çıkan projelerin üstündeki filtreler. Etiketler i18n.js > UI_TEXT.categories içinde.
+// Proje filtreleri; etiketleri i18n.js > UI_TEXT.categories
 const PROJECT_FILTERS = ['all', 'ai', 'vision', 'backend', 'web', 'mobile', 'game'];
 
 /* ---------- Diğer çalışmalar (arşiv) ---------- */
-// thumb.fit: 'cover' (ekranı doldurur, üstten hizalı) | 'contain' (tamamı görünür)
-// thumb.tone: 'dark' terminal / koyu arayüzler için koyu zemin kullanır.
-// Mobil ekranlar için tools/optimize_images.py'nin ürettiği telefon mockup'ları (web/mockups/) kullanılır.
-// Görseli olmayan projelerde kategori rengine göre bir kapak çizilir.
+// thumb.fit: 'cover' (doldurur, üstten hizalı) | 'contain' (tamamı görünür)
+// thumb.tone: 'dark' → koyu zemin (terminal ekranları)
+// Görseli olmayan projelerde kategori renginde kapak çizilir.
 
 const ARCHIVE_FILTERS = ['all', 'ai', 'backend', 'web', 'systems', 'cpp', 'data', 'iot'];
 
@@ -634,7 +633,7 @@ const ARCHIVE_PROJECTS = [
 ];
 
 /* ---------- Deneyim ---------- */
-// type: 'work' (iş / staj) | 'training' (eğitim programı) | 'program' (kuluçka / girişimcilik); ikonu belirler.
+// type: 'work' (iş / staj) | 'training' (eğitim) | 'program' (kuluçka); ikonu belirler
 
 const EXPERIENCE = [
   {
@@ -693,7 +692,7 @@ const EXPERIENCE = [
 
 /* ---------- Sertifikalar ve başarılar ---------- */
 
-// image: sertifikanın görseli (tools/optimize_images.py → web/certs/); üstüne gelince büyür
+// image: web/certs/ altındaki görsel
 const CERTIFICATES = [
   { color: 'blue', year: '2025', name: { tr: 'Google Proje Yönetimi Profesyonel Sertifikası', en: 'Google Project Management Professional Certificate' }, issuer: 'Google', image: IMG + 'certs/google-proje-yonetimi.webp' },
   { color: 'amber', year: '2025', name: { tr: 'Bootcamp Finalisti (DermaAI)', en: 'Bootcamp Finalist (DermaAI)' }, issuer: 'YZTA', image: IMG + 'certs/yzta-finalist.webp' },
@@ -707,9 +706,8 @@ const CERTIFICATES = [
 ];
 
 /* ---------- Yetenekler ---------- */
-// icon: devicon adı ('python' → .../python/python-original.svg), { simple: 'claude' } (simpleicons.org)
-// veya { local: 'easyocr' } (project-assets/web/icons/ içindeki kendi SVG'miz).
-// İkonu olmayanlarda baş harflerden bir rozet gösterilir.
+// icon: devicon adı ('python'), { simple: 'ad' } (simpleicons.org) ya da { local: 'ad' } (web/icons/*.svg)
+// İkonu olmayanlarda baş harf rozeti gösterilir.
 
 const SKILL_GROUPS = [
   {

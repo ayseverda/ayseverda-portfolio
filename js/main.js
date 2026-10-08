@@ -1,5 +1,5 @@
-// Sayfa davranışı: dil değiştirme, projeler, arşiv, deneyim, yetenekler, proje penceresi ve menü.
-// Veriler data.js'de, İngilizce sayfa metinleri ve arayüz metinleri i18n.js'de. Mini oyun game.js'de.
+// Sayfa davranışı: dil, proje kartları, arşiv, deneyim, proje penceresi, video ve menü.
+// Veriler data.js, çeviriler i18n.js, mini oyun game.js içinde.
 
 const LANG_STORAGE_KEY = 'portfolio-lang';
 const ARCHIVE_PREVIEW_COUNT = 8;
@@ -10,7 +10,7 @@ const state = {
   projectFilter: 'all',
   archiveFilter: 'all',
   archiveExpanded: false,
-  openProject: null // açık proje penceresi (dil değişince yeniden çizmek için)
+  openProject: null // açık proje; dil değişince yeniden çizilir
 };
 
 const $ = selector => document.querySelector(selector);
@@ -20,13 +20,13 @@ const $$ = selector => document.querySelectorAll(selector);
 const pick = value => (value && typeof value === 'object' && !Array.isArray(value) && 'tr' in value ? value[state.lang] : value);
 const ui = () => UI_TEXT[state.lang];
 const icon = (name, extraClass = '') => `<svg class="icon ${extraClass}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
-// Etiket düz metin ya da { tr, en, soon } olabilir; soon: henüz geliştirilmekte olan teknoloji
+// Etiket: düz metin ya da { tr, en, soon }; soon → "yakında" etiketi
 const tagsHtml = (tags, className = '') => `<div class="tags ${className}">${tags.map(tag => `<span${tag.soon ? ' class="tag-soon"' : ''}>${pick(tag)}</span>`).join('')}</div>`;
 const initials = name => name.replace(/[^A-Za-z0-9#+ ]/g, '').split(' ').map(word => word[0]).join('').slice(0, 2).toUpperCase();
 
 /* ---------- Sabit sayfa metinleri ---------- */
 
-// Türkçe metinler HTML'den bir kez okunur, böylece tekrar Türkçeye dönülebilir.
+// Türkçe metinler HTML'den bir kez okunur; TR'ye dönünce geri yazılır.
 const PAGE_TR = {};
 
 function attrBindings(element) {
@@ -61,15 +61,15 @@ function chipsHtml(keys, active) {
   ).join('');
 }
 
-// Laptop mockup'ı; projenin videosu varsa ekranın üstünde bir oynat butonu durur.
-// Video yalnızca butona basılınca yüklenir (YouTube oynatıcısı ağır olduğu için).
+// Kart görseli: laptop ya da iki telefon; video varsa üstünde oynat butonu.
+// YouTube oynatıcısı butona basılınca yüklenir.
 function featuredVisualHtml(visual, video) {
   if (visual.layout === 'laptop') {
     const image = visual.images[0];
     const play = video ? playButtonHtml(video) : '';
     return `<div class="laptop-wrap"><img class="laptop" src="${image.src}" alt="${pick(image.alt)}" loading="lazy">${play}</div>`;
   }
-  // 'phones': iki iPhone mockup'ı yan yana; video varsa ortada oynat butonu (dikey video telefonda oynar)
+  // İki telefon yan yana; dikey video telefonda oynar
   const phones = visual.images.map(image => `<img class="phone" src="${image.src}" alt="${pick(image.alt)}" loading="lazy">`).join('');
   return phones + (video ? playButtonHtml(video) : '');
 }
@@ -199,7 +199,7 @@ function closeVideo() {
   zoom.onfinish = () => {
     source.style.visibility = '';
     videoState.button.style.visibility = '';
-    // Oyun ekranı gizli yerine geri döner (durumu korunur)
+    // Oyun ekranı gizli kutusuna geri taşınır
     const gameScreen = device.querySelector('#game-screen');
     if (gameScreen) { window.CozyGame?.stop(); $('#game-holder').append(gameScreen); }
     stage.hidden = true;
@@ -225,7 +225,7 @@ function renderFeatured() {
   applyProjectFilter();
 }
 
-// Filtre; öne çıkan kartları, Cozy afişini ve mini oyunu birlikte gizler/gösterir.
+// Filtre: öne çıkan kartlar ve Cozy afişi birlikte süzülür.
 function applyProjectFilter() {
   $$('#projects [data-filters]').forEach(element => {
     const matches = state.projectFilter === 'all' || element.dataset.filters.split(' ').includes(state.projectFilter);
@@ -299,7 +299,7 @@ function renderExperience() {
     </article>`).join('');
 }
 
-// Sertifika görseli: küçük önizleme; üstüne gelince büyür, tıklayınca tam boyutu yeni sekmede açılır
+// Sertifika küçük resmi: üstüne gelince büyür, tıklayınca yeni sekmede açılır
 function certThumbHtml(cert) {
   if (!cert.image) return '<span></span>';
   const name = pick(cert.name);
@@ -337,7 +337,7 @@ function renderSkills() {
     </div>`).join('');
 }
 
-// Logo yüklenemezse (ör. çevrimdışı) baş harf rozeti gösterilir.
+// Logo yüklenemezse baş harf rozeti gösterilir.
 document.addEventListener('error', event => {
   const image = event.target;
   if (image.classList && image.classList.contains('skill-icon')) {
@@ -356,7 +356,7 @@ function galleryImages(project) {
   return project.gallery || (project.thumb ? [project.thumb.src] : []);
 }
 
-// Bağlantının türüne göre ikon: GitHub, video ya da yok.
+// Bağlantı ikonu: GitHub, video ya da yok.
 function linkIcon(url) {
   if (url.includes('github.com')) return icon('github');
   if (url.includes('youtu')) return icon('play');
@@ -454,7 +454,7 @@ function bindNavigation() {
     });
   }, { passive: true });
 
-  // Ekrandaki bölüme göre menüdeki bağlantıyı vurgular.
+  // Ekrandaki bölümün menü bağlantısı vurgulanır.
   const links = [...$$('.nav a')];
   const sections = links.map(link => $(link.getAttribute('href'))).filter(Boolean);
   const observer = new IntersectionObserver(entries => {
@@ -512,7 +512,7 @@ function bindEvents() {
   bindMailLink();
 }
 
-
+// Fareli cihazlarda mail linki Gmail'de yeni mail açar; telefonda mailto kalır.
 function bindMailLink() {
   const link = $('a[href^="mailto:"]');
   if (!link || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;

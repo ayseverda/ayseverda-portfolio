@@ -7,8 +7,7 @@ proje-aciklama/
 
 
 # project-assets: orijinal görseller yerelde kalır
-# Site yalnızca web/ altındaki optimize kopyaları 
-# mini oyunun kullandığı oyun dosyalarını kullanır.
+# Site yalnızca web/ görsellerini, CV'yi ve mini oyun dosyalarını kullanır.
 project-assets/*
 !project-assets/web/
 !project-assets/Ayse_Verda_Gulcemal.pdf

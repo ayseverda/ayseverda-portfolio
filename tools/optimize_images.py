@@ -1,7 +1,6 @@
-"""Sitede kullanılan görsellerin küçültülmüş WebP kopyalarını project-assets/web/ altına üretir.
+"""Site görsellerinin WebP kopyalarını project-assets/web/ altına üretir; orijinallere dokunmaz.
 
-Orijinaller olduğu gibi kalır. Yeni bir görsel eklediğinde bu dosyadaki IMAGES listesine
-ekleyip çalıştır:  python tools/optimize_images.py
+Yeni görsel: IMAGES listesine ekle ve çalıştır →  python tools/optimize_images.py
 """
 from pathlib import Path
 
@@ -81,8 +80,8 @@ IMAGES = [
 ]
 
 
-# Kişisel bilgilerin (T.C. kimlik no, kimlik kartı, sonuç paneli) web kopyasında gizlenecek alanları.
-# Koordinatlar orijinal görsel pikselleridir: (sol, üst, sağ, alt).
+# Web kopyasında pikselleştirilen kişisel bilgi alanları (T.C. no, kimlik kartı, sonuç paneli).
+# Orijinal görsel pikselleri: (sol, üst, sağ, alt)
 PRIVATE_AREAS = {
     "ocr/ocr-cover.png": [(880, 512, 1162, 578), (1915, 570, 2510, 960), (1890, 1150, 2455, 1560)],
     "ocr/ocr-duzenle.png": [(1512, 770, 2495, 1392)],
@@ -150,9 +149,8 @@ def main() -> None:
 
 
 # ---------------------------------------------------------------------------
-# Cihaz mockup'ları: ekran görüntüleri telefon / laptop / konsol çerçevesinin içine yerleştirilir.
-# Kaynaklar yukarıda üretilen web kopyalarıdır (OCR gizlilik maskesi korunur).
-# Ekran görüntüsü ekranı doldurur (üstten hizalı).
+# Cihaz mockup'ları: ekran görüntüsü çerçevenin ekranını doldurur (üstten hizalı).
+# Kaynak web/ kopyalarıdır, OCR maskesi korunur.
 # (cihaz dosyası, çıktı genişliği)
 DEVICES = {
     "iphone": ("iphone.png", 420),  # yüz felci projesinin telefonu
@@ -177,13 +175,12 @@ def load_device(file_name: str):
     alpha = frame.getchannel("A").point(lambda a: 0 if a < 40 else a)
     frame.putalpha(alpha)
     frame = frame.crop(alpha.getbbox())
-    # Ekran: ortadan başlayarak saydam bölgeyi flood-fill ile işaretle
-    # Ekran camı yarı saydam olabilir; 200 altı alfa "ekran" sayılır
+    # Ekran alanı: ortadan flood-fill; 200 altı alfa ekran sayılır (yarı saydam cam)
     probe = frame.getchannel("A").point(lambda a: 0 if a < 200 else 255).convert("L")
     center = (frame.width // 2, frame.height // 2 if frame.width < frame.height else int(frame.height * 0.45))
     ImageDraw.floodfill(probe, center, 128)
     screen_mask = probe.point(lambda v: 255 if v == 128 else 0)
-    # Ekrandaki cam/parlama katmanını kaldır ki görüntü soluk görünmesin
+    # Ekrandaki cam parlaması silinir
     frame.putalpha(ImageChops.multiply(frame.getchannel("A"), ImageChops.invert(screen_mask)))
     return frame, screen_mask
 

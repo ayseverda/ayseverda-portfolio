@@ -1,6 +1,5 @@
-// Sayfadaki sabit metinlerin İngilizce karşılıkları.
-// Türkçe metinler index.html'de durur; buradaki her anahtar oradaki
-// data-i18n / data-i18n-attr değeriyle eşleşir. Değerler HTML içerebilir.
+// Sayfa metinlerinin İngilizcesi. Türkçeleri index.html'de;
+// anahtarlar data-i18n / data-i18n-attr değerleriyle eşleşir. Değerler HTML içerebilir.
 const PAGE_EN = {
   'meta.title': 'Ayşe Verda Gülcemal — Computer Engineer | AI &amp; Software Developer',
   'meta.description': 'Portfolio of Ayşe Verda Gülcemal, a Computer Engineer building AI, computer vision, backend, mobile and software projects.',
@@ -86,7 +85,7 @@ const PAGE_EN = {
   'modal.closeVideo': 'Close video'
 };
 
-// JavaScript'in oluşturduğu kartlar, filtreler, oyun ve proje penceresi için iki dilli metinler.
+// JS'in oluşturduğu kartlar, filtreler, oyun ve proje penceresi metinleri
 const UI_TEXT = {
   tr: {
     viewProject: 'Projeyi İncele',
@@ -102,7 +101,7 @@ const UI_TEXT = {
     galleryAlt: 'proje görseli',
     showMore: count => `Tümünü göster (${count})`,
     showLess: 'Daha az göster',
-    // Arşiv projelerinde ayrıntılı metin yoksa kullanılan varsayılanlar
+    // Ayrıntı metni olmayan arşiv projeleri için
     fallbackProblem: 'Problemi ve olası çözümlerini uygulamalı olarak keşfettiğim bir proje.',
     fallbackApproach: tags => `${tags.join(', ')} ile geliştirildi.`,
     fallbackResult: 'Aşağıdaki teknolojileri ve kavramları pratikte keşfetmek için geliştirilmiş bir proje.',
