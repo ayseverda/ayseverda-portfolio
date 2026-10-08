@@ -263,7 +263,6 @@ h2 em { font-style: normal; color: var(--accent); }
 .project-card-body p { color: var(--ink-soft); font-size: 15px; }
 .project-card-body .btn { margin-top: auto; }
 .card-tech { display: grid; gap: 6px; width: 100%; padding-top: 12px; border-top: 1px dashed rgb(31 42 68 / 12%); }
-.card-tech > span { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; }
 .team-badge { align-self: flex-start; display: inline-block; padding: 3px 10px; border-radius: 999px; background: var(--tone-pink); color: var(--primary-dark); font-size: 12px; font-weight: 700; }
 .modal-body .team-badge { margin-top: 8px; }
 .card-foot { display: flex; justify-content: flex-end; margin-top: 10px; }

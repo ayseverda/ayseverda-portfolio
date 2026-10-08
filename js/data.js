@@ -16,7 +16,7 @@ const FEATURED_PROJECTS = [
     theme: 'lavender',
     badge: { tr: 'TÜBİTAK 2209-A', en: 'TÜBİTAK 2209-A' },
     filters: ['ai', 'vision', 'mobile'],
-    name: { tr: 'Yüz Felci Takip ve Rehabilitasyon Sistemi', en: 'Facial Paralysis Monitoring & Rehabilitation System' },
+    name: { tr: 'Yüz Felci İzleme ve Rehabilitasyon Sistemi', en: 'Facial Paralysis Monitoring & Rehabilitation System' },
     category: { tr: 'YAPAY ZEKA · BİLGİSAYARLI GÖRÜ · MOBİL', en: 'AI · COMPUTER VISION · MOBILE' },
     tags: ['React Native', 'FastAPI', 'Python', 'MediaPipe Face Mesh'],
     links: [{ label: { tr: 'GitHub', en: 'GitHub' }, url: 'https://github.com/ayseverda/bellspalsy' }],
@@ -96,7 +96,7 @@ const FEATURED_PROJECTS = [
     id: 'derma',
     video: 'I9QDYyXa__0',
     theme: 'lilac',
-    badge: { tr: 'Bootcamp Finalisti', en: 'Bootcamp Finalist' },
+    badge: { tr: 'Google Yapay Zeka ve Teknoloji Akademisi · Bootcamp Finalisti', en: 'Google AI & Technology Academy · Bootcamp Finalist' },
     filters: ['ai', 'vision', 'web', 'backend'],
     name: { tr: 'DermaAI', en: 'DermaAI' },
     category: { tr: 'YAPAY ZEKA · BİLGİSAYARLI GÖRÜ · SAĞLIK', en: 'AI · COMPUTER VISION · HEALTHCARE' },
@@ -718,11 +718,11 @@ const SKILL_GROUPS = [
   },
   {
     title: { tr: 'Yapay Zeka / Görü', en: 'AI / Computer Vision' }, color: 'lavender',
-    items: [['TensorFlow', 'tensorflow'], ['OpenCV', 'opencv'], ['EasyOCR', { local: 'easyocr' }]]
+    items: [['TensorFlow', 'tensorflow'], ['OpenCV', 'opencv'], ['MediaPipe', { local: 'mediapipe' }], ['EasyOCR', { local: 'easyocr' }]]
   },
   {
     title: { tr: 'Backend', en: 'Backend' }, color: 'aqua',
-    items: [['FastAPI', 'fastapi'], ['Flask', 'flask'], ['ASP.NET Core', 'dotnetcore'], ['Spring Boot', 'spring'], ['REST API', { local: 'rest-api' }]]
+    items: [['FastAPI', 'fastapi'], ['Flask', 'flask'], ['ASP.NET Core', 'dotnetcore'], ['REST API', { local: 'rest-api' }]]
   },
   {
     title: { tr: 'Ön Yüz & Mobil', en: 'Frontend & Mobile' }, color: 'ice',

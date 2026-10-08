@@ -222,7 +222,7 @@ function renderFeatured() {
         <h3>${pick(project.name)}</h3>
         <p>${pick(project.description)}</p>
         <button type="button" class="btn btn-light btn-sm" aria-label="${pick(project.name)} ${ui().openDetails}">${ui().viewProject}${icon('arrow')}</button>
-        <div class="card-tech"><span>${ui().technologies}</span>${tagsHtml(project.tags)}</div>
+        <div class="card-tech">${tagsHtml(project.tags)}</div>
       </div>
       <div class="project-card-visual layout-${project.visual.layout}">${featuredVisualHtml(project.visual, project.video)}</div>
     </article>`).join('');
@@ -274,7 +274,7 @@ function renderArchive() {
         <p class="archive-cats">${categoryText(project)}</p>
         <h3>${pick(project.name)}</h3>
         <p>${pick(project.description)}</p>
-        <div class="card-tech"><span>${ui().technologies}</span>${tagsHtml(project.tags.slice(0, 4), 'tags-sm')}</div>
+        <div class="card-tech">${tagsHtml(project.tags.slice(0, 4), 'tags-sm')}</div>
         ${project.team ? `<div class="card-foot"><span class="team-badge">${pick(project.team)}</span></div>` : ''}
       </div>
     </article>`).join('');

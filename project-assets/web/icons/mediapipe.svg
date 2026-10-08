@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Yüz hattı -->
+  <path d="M12 2.5c4.2 0 7 3.3 7 7.8 0 5.6-3.6 11.2-7 11.2s-7-5.6-7-11.2c0-4.5 2.8-7.8 7-7.8z" stroke="#3b82c4" stroke-width="1.8"/>
+  <!-- Yüz noktaları arasındaki ağ -->
+  <path d="M8.6 9.6 12 12.6l3.4-3M12 12.6v2.4M9.6 16.6h4.8" stroke="#1f2a44" stroke-width="1.1" opacity=".55"/>
+  <!-- Yüz noktaları: gözler, burun, ağız -->
+  <g fill="#e05595">
+    <circle cx="8.6" cy="9.6" r="1.3"/><circle cx="15.4" cy="9.6" r="1.3"/>
+    <circle cx="12" cy="12.6" r="1.2"/><circle cx="12" cy="15" r=".9"/>
+    <circle cx="9.6" cy="16.6" r="1.1"/><circle cx="14.4" cy="16.6" r="1.1"/>
+  </g>
+</svg>

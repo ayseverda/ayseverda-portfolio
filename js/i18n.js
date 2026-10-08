@@ -18,8 +18,8 @@ const PAGE_EN = {
   'nav.cv': 'Download CV',
 
   'hero.hello': 'Hi, I’m',
-  'hero.tagline': 'Computer Engineer building with AI, code and curiosity.',
-  'hero.desc': 'I build AI, backend and software projects.',
+  'hero.tagline': 'Most of my projects started with one question: “can I build this?”',
+  'hero.desc': 'I’m a computer engineer building AI, backend and software projects.',
   'hero.cta': 'View Projects',
   'hero.contact': 'Contact',
   'hero.status': 'Open to opportunities',
@@ -48,7 +48,7 @@ const PAGE_EN = {
   'game.start': 'Play',
   'game.canvasLabel': 'Cozy Café mini game',
 
-  'experience.title': 'Work experience',
+  'experience.title': 'Experience',
 
   'skills.title': 'Tools I work with',
 
@@ -75,7 +75,7 @@ const PAGE_EN = {
 
   'now.title': 'Currently building Cozy Cafe',
   'now.lookingLabel': 'ROLES I’M OPEN TO',
-  'now.roles': '<li>Junior Software Engineer</li><li>AI Engineer</li><li>Backend Engineer</li><li>AI Product Engineer</li><li>Computer Vision</li>',
+  'now.roles': '<li>Junior Software Engineer</li><li>AI Engineer</li><li>Backend Engineer</li><li>AI Product Engineer</li><li>Computer Vision Engineer</li>',
   'now.play': 'Try the mini game',
 
   'contact.title': 'Have a project, opportunity, or interesting problem?',
