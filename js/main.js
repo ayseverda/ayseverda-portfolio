@@ -513,6 +513,18 @@ function bindEvents() {
   modal.addEventListener('click', event => { if (event.target === modal) modal.close(); });
 
   bindNavigation();
+  bindMailLink();
+}
+
+// Bilgisayarda çoğu kişide mail programı kurulu değil, mailto tıklanınca hiçbir şey olmuyor.
+// Fareli cihazlarda Gmail'in yeni mail penceresi açılır; telefonda mailto mail uygulamasını açar.
+function bindMailLink() {
+  const link = $('a[href^="mailto:"]');
+  if (!link || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const address = link.getAttribute('href').slice('mailto:'.length);
+  link.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(address)}`;
+  link.target = '_blank';
+  link.rel = 'noreferrer';
 }
 
 function init() {
