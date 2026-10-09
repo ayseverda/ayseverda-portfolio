@@ -98,7 +98,7 @@ const FEATURED_PROJECTS = [
     theme: 'lilac',
     badge: { tr: 'Bootcamp Finalisti', en: 'Bootcamp Finalist' },
     filters: ['ai', 'vision', 'web', 'backend'],
-    name: { tr: 'DermaAI', en: 'DermaAI' },
+    name: { tr: 'DermAI', en: 'DermAI' },
     category: { tr: 'YAPAY ZEKA · BİLGİSAYARLI GÖRÜ · SAĞLIK', en: 'AI · COMPUTER VISION · HEALTHCARE' },
     tags: ['TensorFlow', 'DenseNet121', 'Flask', 'Spring Boot', 'MySQL', 'Gemini API'],
     links: [{ label: { tr: 'GitHub', en: 'GitHub' }, url: 'https://github.com/Sudeozubek/dermAI' }],
@@ -128,7 +128,7 @@ const FEATURED_PROJECTS = [
     },
     visual: {
       layout: 'laptop',
-      images: [{ src: IMG + 'mockups/dermai-laptop.webp', alt: { tr: 'Laptop ekranında DermaAI ana sayfası', en: 'DermaAI home page on a laptop screen' } }]
+      images: [{ src: IMG + 'mockups/dermai-laptop.webp', alt: { tr: 'Laptop ekranında DermAI ana sayfası', en: 'DermAI home page on a laptop screen' } }]
     },
     gallery: ['dermai-cover', 'dermai-chat', 'dermai-alanlar']
   },
@@ -650,11 +650,11 @@ const EXPERIENCE = [
     company: 'GO Path Ön Kuluçka Programı — Bilişim Vadisi',
     type: 'program',
     logo: { src: IMG + 'logos/bilisimvadisi.webp', alt: 'Bilişim Vadisi' },
-    role: { tr: 'Girişimci (DermaAI ekibi)', en: 'Founder-in-training (DermaAI team)' },
+    role: { tr: 'Girişimci (DermAI ekibi)', en: 'Founder-in-training (DermAI team)' },
     meta: { tr: 'Eki 2025 – Şub 2026 · Gebze ve uzaktan', en: 'Oct 2025 – Feb 2026 · Gebze & remote' },
     points: {
-      tr: ['DermaAI projemizle programa kabul edildik; girişimcilik, ürün geliştirme ve iş modeli üzerine eğitim, atölye ve mentorluk süreçlerine katıldım', 'Program, Gebze’de ayda bir yapılan yüz yüze eğitimler ve aralardaki çevrim içi eğitimlerle hibrit olarak ilerledi', 'Projede frontend geliştirmeyi ve yapay zeka servislerinin uygulamaya entegrasyonunu sürdürdüm; ürünleşme ve iş modeli üzerinde de çalıştım'],
-      en: ['Our DermaAI project was accepted into the program, where I took part in training, workshops and mentoring on entrepreneurship, product development and business models', 'The program ran in a hybrid format, with monthly in-person sessions in Gebze and online training in between', 'I continued developing the frontend and integrating the AI services into the app, and also worked on productization and the business model']
+      tr: ['DermAI projemizle programa kabul edildik; girişimcilik, ürün geliştirme ve iş modeli üzerine eğitim, atölye ve mentorluk süreçlerine katıldım', 'Program, Gebze’de ayda bir yapılan yüz yüze eğitimler ve aralardaki çevrim içi eğitimlerle hibrit olarak ilerledi', 'Projede frontend geliştirmeyi ve yapay zeka servislerinin uygulamaya entegrasyonunu sürdürdüm; ürünleşme ve iş modeli üzerinde de çalıştım'],
+      en: ['Our DermAI project was accepted into the program, where I took part in training, workshops and mentoring on entrepreneurship, product development and business models', 'The program ran in a hybrid format, with monthly in-person sessions in Gebze and online training in between', 'I continued developing the frontend and integrating the AI services into the app, and also worked on productization and the business model']
     }
   },
   {
@@ -674,8 +674,8 @@ const EXPERIENCE = [
     role: { tr: 'Katılımcı', en: 'Trainee' },
     meta: { tr: 'Ara 2024 – Ağu 2025 · Uzaktan', en: 'Dec 2024 – Aug 2025 · Remote' },
     points: {
-      tr: ['DermaAI projesinde Gemini entegrasyonu ve frontend geliştirmeyi üstlendim; proje bootcamp finalisti oldu', 'Yapay zeka ve web uygulaması geliştirmenin yanında proje yönetimi ve girişimcilik eğitimleri aldım', 'Gerçek veri setleriyle yapay zeka, web uygulaması geliştirme ve harici servis entegrasyonu alanlarında uygulamalı deneyim kazandım'],
-      en: ['Took on the Gemini integration and frontend development of DermaAI, which became a bootcamp finalist', 'Alongside AI and web application development, completed training in project management and entrepreneurship', 'Gained hands-on experience in AI, web application development and external service integrations with real datasets']
+      tr: ['DermAI projesinde Gemini entegrasyonu ve frontend geliştirmeyi üstlendim; proje bootcamp finalisti oldu', 'Yapay zeka ve web uygulaması geliştirmenin yanında proje yönetimi ve girişimcilik eğitimleri aldım', 'Gerçek veri setleriyle yapay zeka, web uygulaması geliştirme ve harici servis entegrasyonu alanlarında uygulamalı deneyim kazandım'],
+      en: ['Took on the Gemini integration and frontend development of DermAI, which became a bootcamp finalist', 'Alongside AI and web application development, completed training in project management and entrepreneurship', 'Gained hands-on experience in AI, web application development and external service integrations with real datasets']
     }
   },
   {
@@ -695,7 +695,7 @@ const EXPERIENCE = [
 // image: web/certs/ altındaki görsel
 const CERTIFICATES = [
   { color: 'blue', year: '2025', name: { tr: 'Google Proje Yönetimi Profesyonel Sertifikası', en: 'Google Project Management Professional Certificate' }, issuer: 'Google', image: IMG + 'certs/google-proje-yonetimi.webp' },
-  { color: 'amber', year: '2025', name: { tr: 'Bootcamp Finalisti (DermaAI)', en: 'Bootcamp Finalist (DermaAI)' }, issuer: 'YZTA', image: IMG + 'certs/yzta-finalist.webp' },
+  { color: 'amber', year: '2025', name: { tr: 'Bootcamp Finalisti (DermAI)', en: 'Bootcamp Finalist (DermAI)' }, issuer: 'YZTA', image: IMG + 'certs/yzta-finalist.webp' },
   { color: 'violet', year: '2025', name: { tr: 'Bootcamp Katılım Belgesi', en: 'Bootcamp Participation Certificate' }, issuer: 'YZTA', image: IMG + 'certs/yzta-bootcamp.webp' },
   { color: 'green', year: '2025', name: { tr: 'Girişimcilik Eğitimleri', en: 'Entrepreneurship Training' }, issuer: 'YZTA', image: IMG + 'certs/girisimcilik.webp' },
   { color: 'rose', year: '2025', name: { tr: 'Web Uygulamaları Geliştirme Eğitimi', en: 'Web Application Development Training' }, issuer: 'YZTA', image: IMG + 'certs/web-gelistirme.webp' },
